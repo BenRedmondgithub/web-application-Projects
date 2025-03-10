@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\C-sharp-Projects-main\\BookAPI\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\web application Projects\\BookAPI\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\C-sharp-Projects-main\\BookAPI\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\web application Projects\\BookAPI\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\C-sharp-Projects-main\\BookAPI\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\web application Projects\\BookAPI\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\C-sharp-Projects-main\\BookAPI\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\web application Projects\\BookAPI\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\AdminAssist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\C-sharp-Projects-main\\BookAPI\\WebApplication1\\obj\\",
+        "outputPath": "C:\\Users\\AdminAssist\\OneDrive - North Wall CDP\\Desktop\\Bens Work\\web application Projects\\BookAPI\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
