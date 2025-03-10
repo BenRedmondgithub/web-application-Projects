@@ -7,36 +7,20 @@ namespace BookAPI.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        // GET: api/book
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "Book1", "Book2" };
-        }
+       private book[] _books = new book[]
+       {
 
-        // GET: api/book/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "Book" + id;
-        }
-
-        // POST: api/book
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/book/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/book/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        new book{ID = 1, Author = "Author One", Title = "Book One"},
+        new book{ID = 2, Author = "Author Two", Title = "Book Two"},
+        new book{ID = 3, Author = "Author Three", Title = "Book Three"}
+       
+       };
+       
+       [httpGet]
+       public ActionResult<IEnumerable<book>> GetBooks()
+       {
+        return Ok(_books);
+       }
     }
+
 }
