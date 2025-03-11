@@ -13,6 +13,11 @@ namespace bookAPI
 
         app.MapControllers();
 
+        app.MapGet("/", () => 
+        {
+            return Results.Redirect("/api/books");
+        });
+
         app.Run();
         }
     }
