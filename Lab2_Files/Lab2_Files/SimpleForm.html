@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial scale=1.0"> 
+
+<style>
+
+h2 {
+  text-align: center;
+  background-color: rgb(129, 222, 250);
+  margin: 0%;
+}
+
+.container 
+{
+  width: 100%;
+  height: auto;
+  padding: 0%;
+}
+
+fieldset 
+{
+    background-color: #eeeeee;
+}
+
+footer {
+    background-color: rgb(129, 222, 250);
+    position: relative;
+    margin-top: 340px;
+    text-align: center;
+}
+</style>
+
+<body>
+
+  <div id ="container">
+    <header>
+        <h2 style="font-size:4vw;">HTML Forms Exercise</h2>
+    </header>
+
+<p style="font-size:2vw;">
+
+  <label>Name:
+
+  <input name = "name" type = "text" size = "25">
+
+  </label>
+
+  </p>
+
+<!-- <textarea> creates a multiline textbox -->
+
+<p><label>Comments:
+
+  <textarea name = "comments"
+
+       rows = "4" cols = "36">Enter comments here</textarea>
+
+  </label></p>
+
+<!-- <input type = "password"> inserts a textbox with asterisk characters -->
+
+  <p><label>E-mail Address:
+
+    <input name = "email" type = "password" size = "25">
+
+    </label></p>  
+
+    <Section>
+<p>
+
+  <Section>
+  <fieldset name="about">
+    
+    <legend>About Your Course</legend>
+    <table>
+      <td><strong>Things you liked: </strong></td>
+    </table>
+
+  <Table>
+    <td><label>Source code <input name = "thingsliked" type = "checkbox" value = "Code"></label></td>
+    <td><label>Site design <input name = "thingsliked" type = "checkbox" value = "Design"></label></td>
+  </Table>
+
+  <table>
+    <td><label>Ease of use <input name = "thingsliked" type = "checkbox" value = "Ease"></label></td>
+    <td><label>Images <input name = "thingsliked" type = "checkbox" value = "Images"></label></td>
+    <td></td>
+  </table>
+
+  <table>
+    <td><label>Links <input name = "thingsliked" type = "checkbox" value = "Links"></label></td>
+    <td><label>Teacher <input name = "thingsliked" type = "checkbox" value = "Links"></label></td>
+  </table>
+  
+</Section>
+
+</p>
+</fieldset>
+    
+
+<section>
+<!-- <input type = "radio"> creates a radio -->
+<fieldset name="about">
+<legend><strong>How did you get to our site?:</strong></legend>
+
+  <label>Search engine <input name = "hoetosite" type = "radio" value = "search engine" checked></label>
+
+  <label>Links from another site <input name = "hoetosite" type = "radio" value = "link"></label>
+
+  <label>deitel.com Web site <input name = "hoetosite" type = "radio" value = "deitel.com" ></label>
+
+  <label>Refence in a book <input name = "hoetosite" type = "radio" value = "book" ></label>
+
+  <label>Other <input name = "hoetosite" type = "radio" value = "other" ></label>
+
+  </fieldset>
+  
+<p>
+
+<p>
+
+  <label>Rate our site:
+
+    <!-- the <select> tag presents a drop-down list with choices indicated by the <option> tags -->
+
+    <select name = "rating">
+
+      <option selected>Amazing</option>
+      <option>10</option>
+      <option>9</option>
+      <option>8</option>
+      <option>7</option>
+      <option>6</option>
+      <option>5</option>
+      <option>4</option>
+      <option>3</option>
+      <option>2</option>
+      <option>1</option>
+      <option>Awful</option>
+
+      </select>
+
+    </label>
+  </section>
+</p>
+
+<Footer>Copyright &copy; 2022, HCT <i> All rights reserved.</i></Footer>
+
+</body>
+</head>
+</html>
