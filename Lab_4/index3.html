@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script type="text/javascript">
+
+        var startProgram = function()
+
+        {
+            var htmlOutput = "";
+
+            for (var i = 2; i <= 20; i+= 2)
+
+            {
+                htmlOutput = htmlOutput + "i=" + i + "<br>";
+            }
+
+            document.getElementById("paragraph1").innerHTML = htmlOutput;
+        }
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="startProgram();">
+    JavaScript Tutorial <br>
+
+    <p id="paragraph1">
+        This content will be replaced by javascript content.
+    </p>
+    
+</body>
+</html>

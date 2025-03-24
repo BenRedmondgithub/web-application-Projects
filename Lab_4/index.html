@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_4</title>
+</head>
+<body>
+    <h2>Reading Strings Input and Conversion to float</h2>
+
+    <P id="demo"></P>
+
+    <script>
+
+        var firstNumberInput; 
+        var secondNumberInput;
+        var thirdNumberInput;
+
+        var Number1;
+        var Number2;
+        var Number3;
+
+        var sum;
+
+        firstNumberInput = window.prompt("Enter first float")
+        secondNumberInput = window.prompt("Enter second float")
+        thirdNumberInput = window.prompt("Enter third float")
+
+        Number1 = parseFloat (firstNumberInput)
+        Number2 = parseFloat (secondNumberInput)
+        Number3 = parseFloat (thirdNumberInput)
+    
+        sum = Number1 + Number2 - Number3;
+        
+        document.getElementById("demo").innerHTML="sum " + sum
+
+    </script>
+
+</body>
+</html>

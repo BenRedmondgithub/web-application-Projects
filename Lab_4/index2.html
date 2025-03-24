@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+
+        var startProgram = function()
+        {
+        
+        var gradeInput = window.prompt ("Enter the student's grade:")
+        var grade = parseFloat(gradeInput);
+
+        if (grade >= 60.0)
+        {
+            document.getElementById("paragraph1").innerHTML="student passed"
+
+        }
+
+        else 
+
+        {
+            document.getElementById("paragraph2").innerHTML="student failure"
+        }
+
+    }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_4.1</title>
+</head>
+<body onload="startProgram()">
+
+    java script Tutorial <br>
+
+    <p id="paragraph1">
+        This content will be replaced by Javascript content.
+    </p>
+    
+
+    
+</body>
+</html>
