@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+</head>
+<body>
+
+    <h1>JS Date and Time</h1>
+
+    <p id="datetime"></p>
+
+    <script>
+        var today = new Date();
+        console.log(today);
+
+        var day = today.getDay();
+        let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        console.log("Today is: " + dayList[day]);
+        
+        var hour = today.getHours(); 
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+        
+        var prepand = hour >= 12 ? "PM" : "AM";
+
+        hour = hour >= 12 ? hour - 12 : hour;
+        hour = hour === 0 ? 12 : hour;
+
+        var currentTime = "Current time is: " + hour + " " + prepand + " : " + minutes + " : " + seconds;
+        console.log(currentTime);
+
+        document.getElementById("datetime").innerHTML = "Today is: " + dayList[day] + ".<br>Current time is: " + hour + " " + prepand + " : " + minutes + " : " + seconds;
+    </script>
+    
+</body>
+</html>

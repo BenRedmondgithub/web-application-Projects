@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculations</title>
+</head>
+<body>
+
+    <H1>Area Calculations</H1>
+
+    <H2 id="squareArea"></H2>
+    <H2 id="rectangleArea"></H2>
+    <H2 id="triangleArea"></H2>
+
+    <script>
+
+        var side1 = parseFloat(prompt("enter the length of the first side:"));
+        var side2 = parseFloat(prompt("enter the length of the second side:"));
+        var side3 = parseFloat(prompt("enter the length of the third side:"));
+        
+        var squareArea = side1 * side1;
+        document.getElementById("squareArea").innerHTML = "The Area of the the square"
+
+
+        var rectangleArea = side1 * side2;
+        document.getElementById("rectangleArea").innerHTML = "The Area of the the square"
+
+
+        var s = (side1 + side2 + side3) /2;
+        var triangleArea = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+
+    </script>
+    
+</body>
+</html>
