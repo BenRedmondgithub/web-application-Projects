@@ -5,9 +5,50 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-color: #aee2fa;
+  display: block;
+  min-height: 100vh;
+  padding: 0 2rem;
+  color: #000000;
+  text-align: center;
+  line-height: 1.5;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+
+img {
+  max-width: 20%;
+  image-resolution: from-image;
+  max-height: 20%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100rem;
+  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  display: block;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
