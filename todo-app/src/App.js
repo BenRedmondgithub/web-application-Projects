@@ -16,6 +16,21 @@ function App() {
         setTodos(newTodos);
     };
 
+    const handleDeleteTodos = (index) => {
+        const newTodos = todos.filter((_, i) => i !== index);
+        setTodos(newTodos);
+    };
+
+    const toggleDone = (index) => {
+        const newTodos = todos.map((todo, i) => {
+            if (i === index) {
+                return { ...todo, done: !todo.done };
+            }
+            return todo;
+        });
+        setTodos(newTodos);
+    }
+
     return (
         <div>
             <h2>Todo App</h2>
