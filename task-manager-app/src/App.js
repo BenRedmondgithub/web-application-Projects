@@ -24,6 +24,10 @@ function App() {
       <header className="App-header">
         <h1>Task Manager App</h1>
 
+        <p>Manage your tasks efficiently!</p>
+
+        <img src="https://via.placeholder.com/150" alt="Task Manager" />
+
         {/* Task Input Form */}
         <form onSubmit={handleAddTask}>
           <input
