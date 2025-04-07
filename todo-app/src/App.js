@@ -22,6 +22,12 @@ function App() {
         setIsFirstImage(!isFirstImage);
     };
 
+    <input
+    type="text"
+    value={input} // Controlled by the `input` state
+    onChange={(e) => setInput(e.target.value)} // Updates the state on user input 
+    />
+
     return (
         <div>
             <h1>Remember, do it for this gentle frog</h1>
