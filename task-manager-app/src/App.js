@@ -26,7 +26,7 @@ function App() {
 
         <p>Manage your tasks efficiently!</p>
 
-        <img src="https://via.placeholder.com/150" alt="Task Manager" />
+        <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/34246/images/2VUiCqzASBqK3hIw7mag_Note-taking.jpg" alt="Task Manager" />
 
         {/* Task Input Form */}
         <form onSubmit={handleAddTask}>
