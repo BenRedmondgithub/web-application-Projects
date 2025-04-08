@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography, Grid, Button } from "@mui/material";
-import MyCardComponent from "./FEATURED"; // adjust path if needed
+import MyCardComponent from "./components/FEATURED"; // 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 
@@ -34,10 +34,10 @@ function HeroSection() {
   );
 }
 
-function App() {
+function MyCardComponent() {
   return (
     <div>
-    <MyCardComponent/>  {MyCardComponent}
+    <MyCardComponent/>
   </div>
 );
 
