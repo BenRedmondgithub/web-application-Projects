@@ -29,7 +29,7 @@ function App() {
                 src={
                     isFirstImage
                         ? 'https://avatars.githubusercontent.com/u/73973708?v=4'
-                        : 'https://scontent-dub4-1.xx.fbcdn.net/v/t39.30808-6/468335868_592496053237657_1417946603696020450_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=PHJgzaDWmK8Q7kNvgGs6NLv&_nc_oc=Adm8i87XEC41gzzmykjaFl4g-8h7tm_S9vkLJ2k15d30iUBV3JCLhHlSK2WnHqugUV0&_nc_zt=23&_nc_ht=scontent-dub4-1.xx&_nc_gid=hcqT26VPA7PeI7Ifs8HOfg&oh=00_AYHv08_4vk2N9dX1BTME8nCASBHHaxk8jo7TBJXdWvzMnA&oe=67F22DC8'
+                        : 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Frog_dressed_as_gentleman_with_flowers%2C_top_hat_and_umbrella_Wellcome_V0050703_%28cropped%29.jpg/1200px-Frog_dressed_as_gentleman_with_flowers%2C_top_hat_and_umbrella_Wellcome_V0050703_%28cropped%29.jpg'
                 }
                 alt="Frog"
                 onClick={toggleImage}
