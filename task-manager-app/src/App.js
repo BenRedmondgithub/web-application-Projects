@@ -29,7 +29,6 @@ function App() {
           <ul>
             <li><Link to="/">Task Manager</Link></li>
             <li><Link to="/about">About</Link></li>
-            <li><Link to="/help">Help</Link></li>
           </ul>
         </nav>
 

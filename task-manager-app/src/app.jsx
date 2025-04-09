@@ -1,28 +1,25 @@
 import React from "react";
-import { BrowserRouter, Route, Router, Router } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./../task-manager-app/src/pages/home.jsx";
+import About from "./pages/about.jsx";
 import Navbar from "./components/Navbar";
-import { cssBaseline } from "./styles/globalStyles";
-
-
+// If CssBaseline is from Material-UI, import it like this:
+// import { CssBaseline } from "@mui/material";
 
 const App = () => {
     return (
         <>
-        <cssBaseline/>
-        <Navbar/>
-        <Routes> 
-        <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                </Routes>
-        </Router>
-        </Routes>
+        {/* Replace <cssBaseline /> with <CssBaseline /> if using Material-UI */}
+        {/* <CssBaseline /> */}
+        <Navbar />
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </BrowserRouter>
         </>
     );
-
 };
 
-export default App; 
+export default App;
