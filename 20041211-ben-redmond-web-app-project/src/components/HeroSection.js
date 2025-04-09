@@ -1,36 +1,22 @@
+// This is a React component that serves as a hero section for a photography website.
+// It uses Material-UI for styling and layout. The component displays a title and a subtitle within a container.
 import React from "react";
-import { Container, Typography, Grid, Button } from "@mui/material";
+// Ensure the CSS file exists or remove the import if unnecessary
+// import "./index.css"; 
+import { Container, Typography } from "@mui/material";
 
 function HeroSection() {
   return (
-    <div style={{ backgroundImage: "url('./assets/')", backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>
-      <div style={{ backgroundColor: "rgb(158, 226, 231)", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-    <Container maxWidth="md" style={{ textAlign: "center", padding: "3.2rem 0" }}>
-      <Typography variant="h1" gutterBottom>
-        Ben Redmond Photography
-      </Typography>
-      <Typography variant="h4" gutterBottom>
-      The poetry of the everyday, captured.
-      </Typography>
+    <div className="hero-section">
+      <Container maxWidth="md">
+        <Typography variant="h2" gutterBottom>
+          Ben Redmond Photography
+        </Typography>
+        <Typography variant="h6">
+          The poetry of the everyday, captured.
+        </Typography>
       </Container>
-      </div>
-
-      <Grid container spacing={2} justifyContent="center" style={{ marginTop: "2rem" }}>
-        <Grid item>
-          <Button variant="contained" color="success">View Portfolio</Button>
-        </Grid>
-        <Grid item>
-          <Button variant="contained" color="success">Buy Prints</Button>
-        </Grid>
-        <Grid item>
-          <Button variant="contained" color="success">Hire Me</Button>
-        </Grid>
-      </Grid>
     </div>
-
-    
-
-
   );
 }
 

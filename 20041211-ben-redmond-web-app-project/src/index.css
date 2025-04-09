@@ -12,11 +12,29 @@ code {
     monospace;
 }
 
-h1 {
-  font-size: 2rem;
+.hero-section {
+  background-image: url('https://scontent-dub4-1.xx.fbcdn.net/v/t1.6435-9/205611492_887056145213993_75701544395680594_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LIONkMNyD1oQ7kNvgHuP9hb&_nc_oc=Admj2J3YesKFl65zlXWG5UCSOoWWybNzOFSr_Yof2o23RtS27IQhi6U3NB7Dfc4-kGU&_nc_zt=23&_nc_ht=scontent-dub4-1.xx&_nc_gid=d6j5SfN6ahh5Wm8nM9J6qA&oh=00_AYFAQXcmzJ5gk6g1SzDhEeXYsigekucTiKBIoCX-q55rXw&oe=6811D821');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+  height: 300px;
+  display: flex;
+  position: relative;
+  width: auto;
+}
+
+h2 {
+  font-size: 1rem;
   margin: 0;
 }
-h2 {
-  font-size: 1.5rem;
+h6 {
+  font-size: 1rem;
   margin: 0;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
 } 
