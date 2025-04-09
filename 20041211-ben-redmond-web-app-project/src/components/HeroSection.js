@@ -3,7 +3,7 @@ import { Container, Typography, Grid, Button } from "@mui/material";
 
 function HeroSection() {
   return (
-    <div style={{ backgroundImage: "url('/path/to/your/image.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>
+    <div style={{ backgroundImage: "url('./assets/')", backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh' }}>
       <div style={{ backgroundColor: "rgb(158, 226, 231)", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
     <Container maxWidth="md" style={{ textAlign: "center", padding: "3.2rem 0" }}>
       <Typography variant="h1" gutterBottom>
@@ -27,6 +27,10 @@ function HeroSection() {
         </Grid>
       </Grid>
     </div>
+
+    
+
+
   );
 }
 
