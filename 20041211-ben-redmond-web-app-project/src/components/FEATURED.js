@@ -1,6 +1,6 @@
 // src/components/myCardComponent.jsx
 import React from 'react';
-import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/material';
+import { Container, Grid, Card, CardMedia, CardContent, Button, Box, Typography } from '@mui/material';
 
 const cardData = [
   {
@@ -51,4 +51,22 @@ function myCardComponent() {
   );
 }
 
-export default myCardComponent;
+export default function OutlinedCard() {
+  return (
+    <Box sx={{ minWidth: 275 }}>
+      <Card variant="outlined">
+        <CardContent>
+          <Typography variant="h5" component="div">
+            Example Card
+          </Typography>
+          <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            Example Subtitle
+          </Typography>
+          <Typography variant="body2">
+            Example content for the outlined card.
+          </Typography>
+        </CardContent>
+      </Card>
+    </Box>
+  );
+}
