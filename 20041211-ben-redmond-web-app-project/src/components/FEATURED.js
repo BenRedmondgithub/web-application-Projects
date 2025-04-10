@@ -6,17 +6,17 @@ const cardData = [
   {
     title: 'View Portfolio',
     image: '/Web Project/assigns/imgs/gallery-icon.png',
-    link: '#',
+    link: '/Web Project/assigns/imgs/gallery-icon.png',
   },
   {
     title: 'Buy Prints',
     image: '/Web Project/assigns/imgs/Ecommerce-Buy-icon.png',
-    link: '#',
+    link: '/Web Project/assigns/imgs/Ecommerce-Buy-icon.png',
   },
   {
     title: 'Hire Me',
     image: '/Web Project/assigns/imgs/10436064.png',
-    link: '#',
+    link: '/Web Project/assigns/imgs/10436064.png',
   },
 ];
 
@@ -51,5 +51,4 @@ function myCardComponent() {
   );
 }
 
-
-export default MyCardComponent;
+export default myCardComponent;
