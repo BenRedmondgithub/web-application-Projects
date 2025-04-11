@@ -1,39 +1,29 @@
 import React from "react";
 import HeroSection from "./components/HeroSection"; // adjust path if needed
 import MyCardComponent from "./components/FEATURED.jsx"; // adjust path if needed
-import { Box, CardActions, CardContent, Button, Typography } from '@mui/material'; // Import Box
+import { Box, CardActions, CardContent, Button, Typography, Card } from '@mui/material'; // Import Box
 
 function App() {
-  const bull = ( // Move bull declaration here
-    <Box
-      component="span"
-      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-      •
-    </Box>
-  );
+  const cardData = [
+    
+    {
+      title: 'View Portfolio',
+      image: '/Web Project/assigns/imgs/portfolio.png',
+      link: '/Web Project/assigns/imgs/portfolio.png',
+    },
 
-  const card = (
-    <React.Fragment>
-      <CardContent>
-        <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="div">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>adjective</Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </React.Fragment>
-  );
+    {
+      title: 'Buy Prints',
+      image: '/Web Project/assigns/imgs/prints.png',
+      link: '/Web Project/assigns/imgs/prints.png',
+    },
+
+    {
+      title: 'Hire Me',
+      image: '/Web Project/assigns/imgs/hire.png',
+      link: '/Web Project/assigns/imgs/hire.png',
+    },
+  ];
 
   return (
     <div>
