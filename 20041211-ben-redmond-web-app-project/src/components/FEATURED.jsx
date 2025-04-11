@@ -6,7 +6,7 @@ const cardData = [
   {
     title: 'View Portfolio',
     image: './src/20041211-ben-redmond-web-app-project/assigns/imgs/portfolio.png',
-    link: '/Web Project/assigns/imgs/portfolio.png',
+    link: '',
   },
   {
     title: 'Buy Prints',
