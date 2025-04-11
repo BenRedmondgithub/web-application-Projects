@@ -5,22 +5,22 @@ import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/mate
 const cardData = [
   {
     title: 'View Portfolio',
-    image: '/Web Project/assigns/imgs/gallery-icon.png',
-    link: '#',
+    image: '/Web Project/assigns/imgs/portfolio.png',
+    link: '/Web Project/assigns/imgs/portfolio.png',
   },
   {
     title: 'Buy Prints',
-    image: '/Web Project/assigns/imgs/Ecommerce-Buy-icon.png',
-    link: '#',
+    image: '/Web Project/assigns/imgs/prints.png',
+    link: '/Web Project/assigns/imgs/prints.png',
   },
   {
     title: 'Hire Me',
-    image: '/Web Project/assigns/imgs/10436064.png',
-    link: '#',
+    image: '/Web Project/assigns/imgs/hire.png',
+    link: '/Web Project/assigns/imgs/prints.png',
   },
 ];
 
-function myCardComponent() {
+function MyCardComponent () {
   return (
     <Container sx={{ py: 6 }}>
       <Grid container spacing={4} justifyContent="center">
