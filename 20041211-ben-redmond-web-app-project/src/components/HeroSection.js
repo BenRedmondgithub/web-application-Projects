@@ -1,3 +1,4 @@
+
 // This is a React component that serves as a hero section for a photography website.
 // It uses Material-UI for styling and layout. The component displays a title and a subtitle within a container.
 import React from "react";

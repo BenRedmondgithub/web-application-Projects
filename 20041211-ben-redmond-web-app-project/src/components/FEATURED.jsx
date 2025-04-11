@@ -5,7 +5,7 @@ import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/mate
 const cardData = [
   {
     title: 'View Portfolio',
-    image: '/Web Project/assigns/imgs/portfolio.png',
+    image: './src/20041211-ben-redmond-web-app-project/assigns/imgs/portfolio.png',
     link: '/Web Project/assigns/imgs/portfolio.png',
   },
   {
@@ -26,7 +26,7 @@ function MyCardComponent () {
       <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ maxWidth: 345, mx: 'auto' }}>
+            <Card xl={{ maxWidth: 345, mx: 'auto' }}>
               <CardMedia
                 component="img"
                 height="200"
