@@ -20,7 +20,7 @@ const cardData = [
   },
 ];
 
-function myCardComponent() {
+function MyCardComponent() {
   return (
     <Container sx={{ py: 6 }}>
       <Grid container spacing={4} justifyContent="center">
@@ -51,22 +51,5 @@ function myCardComponent() {
   );
 }
 
-export default function OutlinedCard() {
-  return (
-    <Box sx={{ minWidth: 275 }}>
-      <Card variant="outlined">
-        <CardContent>
-          <Typography variant="h5" component="div">
-            Example Card
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            Example Subtitle
-          </Typography>
-          <Typography variant="body2">
-            Example content for the outlined card.
-          </Typography>
-        </CardContent>
-      </Card>
-    </Box>
-  );
-}
+export default MyCardComponent;
+

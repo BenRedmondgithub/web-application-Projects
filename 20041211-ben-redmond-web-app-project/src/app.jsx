@@ -1,11 +1,14 @@
 import React from "react";
-import HeroSection from "./components/HeroSection"; // adjust path if needed
+import HeroSection from "./components/HeroSection";
+import MyCardComponent from './components/FEATURED';
+//import { Box, CardActions, CardContent, Button, Typography, Card } from '@mui/material'; // Import Box
+// import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material'; // Import Box
 
 function App() {
   return (
     <div>
       <HeroSection />
-      {/* You can add other sections here later */}
+      <MyCardComponent />
     </div>
   );
 }
