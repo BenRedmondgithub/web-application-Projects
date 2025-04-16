@@ -4,7 +4,7 @@ import { Container, Typography, Box, Button } from "@mui/material";
 
 function PrintShopSection() {
     return (
-    <Box sx={{bgcolor: "#f5f5f5", py: 8}}> 
+    <Box sx={{bgcolor: "#BEE7F2", py: 18}}> 
         <Container maxWidth="md" sx={{ textAlign: "center"}}>
             <h1>Print Shop</h1>
         <Button

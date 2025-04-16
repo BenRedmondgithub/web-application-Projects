@@ -6,7 +6,7 @@ import { Container, Typography } from "@mui/material";
 function HeroSection() {
   return (
     <div className="hero-section">
-      <Container maxWidth="md">
+      <Container maxWidth="xl">
         <Typography variant="h2" gutterBottom>
           Ben Redmond Photography
         </Typography>

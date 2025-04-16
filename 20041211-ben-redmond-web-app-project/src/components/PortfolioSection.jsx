@@ -20,14 +20,14 @@ const portfolioItems = [
 
 function PortfolioSection() {
     return (
-        <div style={{ backgroundColor: '#f5f5f5' }}>
+        <div style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
         <Container sx={{ py: 12 }}>
             <Typography variant="h4" align="center" gutterBottom>
                 Portfolio
             </Typography>
-            <Grid container spacing={4} justifyContent="center">
+            <Grid container spacing={10} justifyContent="center">
                 {portfolioItems.map((item, index) => (
-                    <Grid item xl={15} sm={15} md={15} key={index}>
+                    <Grid item xl={12} sm={6} md={4} key={index}>
                         <Card xl={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                             <CardMedia
                                 component="img"
