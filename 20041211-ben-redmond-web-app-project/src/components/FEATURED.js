@@ -25,7 +25,7 @@ function MyCardComponent() {
     <Container sx={{ py: 50, bgcolor: '#D4B6FF' }}>
       <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={6} sm={6} md={4} key={index}>
             <Card sx={{ maxWidth: 345, mx: 'auto' }}>
               <CardMedia
                 component="img"
