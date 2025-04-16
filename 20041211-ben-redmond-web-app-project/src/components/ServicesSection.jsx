@@ -25,7 +25,7 @@ const services = [
 
 function ServicesSection() { 
     return ( 
-        <Container sx={{ py: 8 }}>
+        <Container sx={{ py:25 }}>
             <Typography variant="h4" align="center" gutterBottom>
                 Services
             </Typography>

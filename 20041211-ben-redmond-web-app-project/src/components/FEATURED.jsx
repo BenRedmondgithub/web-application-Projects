@@ -22,7 +22,7 @@ const cardData = [
 
 function MyCardComponent () {
   return (
-    <Container sx={{ py: 6 }}>
+    <Container sx={{ py: 55 }}>
       <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
           <Grid item xl={12} sm={6} md={4} key={index}>

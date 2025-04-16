@@ -21,7 +21,7 @@ const portfolioItems = [
 function PortfolioSection() {
     return (
         <div style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
-        <Container sx={{ py: 12 }}>
+        <Container sx={{ py: 45 }}>
             <Typography variant="h4" align="center" gutterBottom>
                 Portfolio
             </Typography>
