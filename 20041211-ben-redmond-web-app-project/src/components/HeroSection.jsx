@@ -1,5 +1,4 @@
 import React from "react";
-// Ensure the CSS file exists or remove the import if unnecessary
 import "./index.css"; 
 import { Container, Typography } from "@mui/material";
 
