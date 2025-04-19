@@ -4,7 +4,8 @@ import MyCardComponent from "./components/FEATURED";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
 import ServicesSection from "./components/ServicesSection";
-import ContactSection  from "./components/CONTACT"; 
+import ContactSection  from "./components/CONTACT";
+import FOOTER from "./components/FOOTER"; 
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <PrintShopSection />
       <ServicesSection />
       <ContactSection />
+      <FOOTER />
     </div>
   );
 }
