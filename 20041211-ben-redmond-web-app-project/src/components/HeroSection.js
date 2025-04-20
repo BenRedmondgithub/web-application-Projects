@@ -11,10 +11,10 @@ function HeroSection() {
     <div className="hero-section">
       <Container maxWidth="md">
         <Typography variant="h2" gutterBottom>
-          Ben Redmond Photography
+          Ben Redmond Photography 
         </Typography>
         <Typography variant="h6">
-          The poetry of the everyday, captured.
+          The poetry of the everyday, captured! 📸 
         </Typography>
       </Container>
     </div>
