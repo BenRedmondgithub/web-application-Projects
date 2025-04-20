@@ -5,12 +5,12 @@ import { Container, Typography } from "@mui/material";
 function HeroSection() {
   return (
     <div className="hero-section">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mt: 9, mb: 10 }}  >
         <Typography variant="h2" gutterBottom>
           Ben Redmond Photography
         </Typography>
         <Typography variant="h6">
-          The poetry of the everyday, captured.
+          The poetry of the everyday, captured!
         </Typography>
       </Container>
     </div>
