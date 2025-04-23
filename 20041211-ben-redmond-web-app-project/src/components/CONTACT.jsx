@@ -1,7 +1,7 @@
 import React from "react";
+import './index.css';
 
 import { Container, Typography, Box, Button } from "@mui/material";
-import { grey } from "@mui/material/colors";
 
 function ContactSection() {
     return (
