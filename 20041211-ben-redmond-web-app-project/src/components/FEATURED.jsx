@@ -5,13 +5,13 @@ import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/mate
 const cardData = [
   {
     title: 'View Portfolio',
-    image: './src/20041211-ben-redmond-web-app-project/assigns/imgs/portfolio.png',
+    image: '/img/Ecommerce-Buy-icon.png',
     link: '',
   },
   {
     title: 'Buy Prints',
     image: '/Web Project/assigns/imgs/prints.png',
-    link: '/Web Project/assigns/imgs/prints.png',
+    link: '#',
   },
   {
     title: 'Hire Me',

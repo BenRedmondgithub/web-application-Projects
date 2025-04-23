@@ -6,15 +6,15 @@ import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/
 const portfolioItems = [
     {
         title: 'Landscapes',
-        image: '/Web Project/assigns/imgs/landscape.jpg',
+        image: '/assets/img/landscape.jpg',
     },
     {
         title: 'Portraits',
-        image: '/Web Project/assigns/imgs/portrait.jpg',
+        image: '/assets/img/portrait.jpg',
     },
     {
         title: 'Events',
-        image: '/Web Project/assigns/imgs/event.jpg',
+        image: '/assigns/imgs/event.jpg',
     },
 ];
 
