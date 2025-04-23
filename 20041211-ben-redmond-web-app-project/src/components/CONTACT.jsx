@@ -1,6 +1,5 @@
 import React from "react";
 import './index.css';
-
 import { Container, Typography, Box, Button } from "@mui/material";
 
 function ContactSection() {
