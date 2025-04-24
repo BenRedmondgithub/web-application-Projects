@@ -6,15 +6,15 @@ import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/
 const portfolioItems = [
     {
       title: 'Landscapes',
-      image: 'https://via.placeholder.com/400x250?text=Landscapes'
+      image: '/img/Land.png'
     },
     {
       title: 'Portraits',
-      image: 'https://via.placeholder.com/400x250?text=Landscapes'
+      image: '/img/porttraits.png'
     },
     {
       title: 'Events',
-      image: 'https://via.placeholder.com/400x250?text=Landscapes',
+      image: '/img/events.png',
     },
   ];
   
@@ -28,7 +28,7 @@ function PortfolioSection() {
             </Typography>
             <Grid container spacing={10} justifyContent="center">
                 {portfolioItems.map((item, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Grid item xs={12} sm={6} md={6} key={index}>
                         <Card sx={{ border: '2px solid red' }}>
                             <CardMedia
                                 component="img"

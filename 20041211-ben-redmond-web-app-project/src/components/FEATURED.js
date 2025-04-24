@@ -4,28 +4,28 @@ import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/mate
 const cardData = [
   {
     title: 'View Portfolio',
-    image: '/img/Ecommerce-Buy-icon.png',
-    link: '',
+    image: '/img/test.png',
+    link: '#',
   },
   {
     title: 'Buy Prints',
-    image: '/Web Project/assigns/imgs/prints.png',
+    image: '/img/Ecommerce-Buy-icon.png',
     link: '#',
   },
   {
     title: 'Hire Me',
-    image: '/Web Project/assigns/imgs/hire.png',
-    link: '/Web Project/assigns/imgs/prints.png',
+    image: '/img/hire-me.png',
+    link: '#',
   },
 ];
 
-function MyCardComponent () {
+function MyCardComponent() {
   return (
-    <Container sx={{ py: 100 }}>
+    <Container sx={{ py: 12 }}>
       <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
-          <Grid item xl={12} sm={6} md={4} key={index}>
-            <Card xl={{ maxWidth: 345, mx: 'auto' }}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ maxWidth: 345, mx: 'auto' }}>
               <CardMedia
                 component="img"
                 height="200"
@@ -49,6 +49,5 @@ function MyCardComponent () {
     </Container>
   );
 }
-
 
 export default MyCardComponent;
