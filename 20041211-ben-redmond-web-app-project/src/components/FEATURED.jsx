@@ -5,20 +5,22 @@ import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/mate
 const cardData = [
   {
     title: 'View Portfolio',
-    image: 'public/assets/img/Ecommerce-Buy-icon.png',
-    link:  '#',
+    image: '/assets/img/Ecommerce-Buy-icon.png',
+    link: '#',
   },
   {
     title: 'Buy Prints',
-    image: 'https://via.placeholder.com/400x250?text=Landscapes',
+    image: '/assets/img/buy-icon.jpg', // ✅ new clean path
     link: '#',
   },
   {
     title: 'Hire Me',
-    image: 'https://via.placeholder.com/400x250?text=Landscapes',
+    image: '/assets/img/hire-me.png', // ✅ new clean path
     link: '#',
   },
 ];
+
+
 
 function MyCardComponent () {
   return (
