@@ -5,18 +5,19 @@ import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/
 
 const portfolioItems = [
     {
-        title: 'Landscapes',
-        image: './assets/landscape.jpg',
+      title: 'Landscapes',
+      image: '/assets/imgs/landscape.jpg',
     },
     {
-        title: 'Portraits',
-        image: '/assets/img/portrait.jpg',
+      title: 'Portraits',
+      image: '/assets/imgs/portrait.jpg',
     },
     {
-        title: 'Events',
-        image: '/assigns/imgs/event.jpg',
+      title: 'Events',
+      image: '/assets/imgs/event.jpg',
     },
-];
+  ];
+  
 
 function PortfolioSection() {
     return (
