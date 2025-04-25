@@ -4,12 +4,12 @@ import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/mate
 const cardData = [
   {
     title: 'View Portfolio',
-    image: '/img/test.png',
+    image: '/img/Ecommerce-Buy-icon.png',
     link: '#',
   },
   {
     title: 'Buy Prints',
-    image: '/img/Ecommerce-Buy-icon.png',
+    image: '/img/test.png',
     link: '#',
   },
   {
@@ -25,10 +25,18 @@ function MyCardComponent() {
       <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ maxWidth: 345, mx: 'auto' }}>
+            <Card sx=
+            {{ height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              maxWidth: 345,
+              mx: 'auto', 
+              }}>
+              
               <CardMedia
                 component="img"
-                height="200"
+                height="240"
                 image={card.image}
                 alt={card.title}
               />

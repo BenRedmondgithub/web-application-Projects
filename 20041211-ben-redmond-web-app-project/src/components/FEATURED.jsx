@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Card, CardMedia, CardContent, Button } from '@mui/material';
+import { Container, Grid, Card, CardMedia, CardContent, Button, Typography } from '@mui/material';
 
 const cardData = [
   {
@@ -25,14 +25,26 @@ function MyCardComponent() {
       <Grid container spacing={4} justifyContent="center">
         {cardData.map((card, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card sx={{ maxWidth: 345, mx: 'auto' }}>
+            <Card sx=
+            {{ height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              maxWidth: 345,
+              mx: 'auto', 
+              }}>
+              
               <CardMedia
                 component="img"
-                height="200"
-                image={card.image}
-                alt={card.title}
+                height="240"
+                image={service.image}
+                alt={service.title}
               />
               <CardContent sx={{ textAlign: 'center' }}>
+                <Typography variant='h6' gutterBottom>
+                  {card.title}
+                </Typography>
+                
                 <Button
                   variant="contained"
                   color="primary"

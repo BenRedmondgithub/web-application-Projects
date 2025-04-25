@@ -29,7 +29,7 @@ function PortfolioSection() {
             <Grid container spacing={10} justifyContent="center">
                 {portfolioItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={6} key={index}>
-                        <Card sx={{ border: '2px solid red' }}>
+                        <Card sx={{ border: '10px' }}>
                             <CardMedia
                                 component="img"
                                 height="200"
