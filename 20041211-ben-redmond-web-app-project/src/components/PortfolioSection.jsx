@@ -1,7 +1,7 @@
 // PortfolioSection.jsx
 // src/components/PortfolioSection.jsx
 import React from 'react';
-import { Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import { Button, Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
 
 const portfolioItems = [
     {
@@ -14,7 +14,7 @@ const portfolioItems = [
     },
     {
       title: 'Events',
-      image: '/img/events.png',
+      image: '/img/dancing.jpg',
     },
   ];
   
@@ -46,6 +46,17 @@ function PortfolioSection() {
                     </Grid>
                 ))}
             </Grid>
+            <Button
+                align="center"
+                display="center"
+                variant="contained"
+                color="secondary"
+                size="large"
+                sx={{ mt: 9, mb: 10, display: 'flex', justifyContent: 'center', mx: 'auto' }}
+            >
+                View Portfolio
+            </Button>
+
         </Container>
         </div>
     );
