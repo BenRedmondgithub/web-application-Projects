@@ -29,17 +29,18 @@ function PortfolioSection() {
             <Grid container spacing={10} justifyContent="center">
                 {portfolioItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={6} key={index}>
-                        <Card sx={{ border: '10px' }}>
+                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                             <CardMedia
                                 component="img"
-                                height="200"
+                                height="300"
                                 image={item.image}
                                 alt={item.title}
+                                sx={{objectFit: 'cover'}}
                             />
                             <CardContent sx={{ textAlign: 'center' }}>
-                                <Typography variant="h6" align="center">
-                                    {item.title}
-                                </Typography>
+                            <Typography>
+                                {item.title}
+                            </Typography>    
                             </CardContent>
                         </Card>
                     </Grid>
