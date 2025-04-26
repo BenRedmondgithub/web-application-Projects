@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "./components/HeroSection";
-import MyCardComponent from "./components/FEATURED";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
 import ServicesSection from "./components/ServicesSection";
@@ -13,7 +12,6 @@ function App() {
   return (
     <div>
       <HeroSection />
-      <MyCardComponent />
       <PortfolioSection />
       <PrintShopSection />
       <ServicesSection />

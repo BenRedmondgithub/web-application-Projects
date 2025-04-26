@@ -22,8 +22,8 @@ const portfolioItems = [
 function PortfolioSection() {
     return (
         <div style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
-        <Container sx={{ py: 45 }}>
-            <Typography variant="h4" align="center" gutterBottom>
+        <Container sx={{ py: 15 }}>
+            <Typography variant="h3" align="center" gutterBottom>
                 Portfolio
             </Typography>
             <Grid container spacing={10} justifyContent="center">
