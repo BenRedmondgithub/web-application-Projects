@@ -1,4 +1,7 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import GalleryPage from "./Pages/GalleryPage.jsx";
 import HeroSection from "./components/HeroSection";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
@@ -7,7 +10,7 @@ import ContactSection  from "./components/CONTACT";
 import FOOTER from "./components/FOOTER"; 
 
 
-function App() {
+function HomePage() {
 
   return (
     <div>
@@ -21,7 +24,18 @@ function App() {
   );
 }
 
-
+function App() 
+{
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/portfolio" element={<GalleryPage/>} />
+     </Routes>
+    </Router>
+  );
+}
 
 export default App;
 

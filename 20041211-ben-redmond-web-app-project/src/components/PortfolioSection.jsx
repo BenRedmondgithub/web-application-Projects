@@ -2,6 +2,7 @@
 // src/components/PortfolioSection.jsx
 import React from 'react';
 import { Button, Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const portfolioItems = [
     {
@@ -53,6 +54,7 @@ function PortfolioSection() {
                 color="secondary"
                 size="large"
                 sx={{ mt: 9, mb: 10, display: 'flex', justifyContent: 'center', mx: 'auto' }}
+                component={Link} to="/portfolio"
             >
                 View Portfolio
             </Button>
