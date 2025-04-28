@@ -23,7 +23,7 @@ const HireMe = () => {
 
       <TextField 
       fullWidth 
-      label="Username" 
+      label="Name" 
       sx={{ mb: 2}}
       onChange={e => setUsername(e.target.value)} 
       />
