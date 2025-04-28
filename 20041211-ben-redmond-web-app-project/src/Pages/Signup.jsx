@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'; // Added useNavigate
 import { Container, TextField, Button, Typography } from '@mui/material';
 
 
-const Login = () => {
+const Signup = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   
@@ -18,7 +18,7 @@ const Login = () => {
 
   return (
     <Container maxWidth="sm" sx={{ mt: 10 }}>
-      <Typography variant="h4" gutterBottom>Login</Typography>
+      <Typography variant="h4" gutterBottom>Sign up</Typography>
 
       <TextField 
       fullWidth 
@@ -40,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

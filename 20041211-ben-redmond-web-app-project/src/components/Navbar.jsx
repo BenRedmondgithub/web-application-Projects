@@ -16,7 +16,7 @@ export default function Navbar() {
             <Button component={Link} to="/shop" variant="outlined" sx={{ mx: 1 }}>
               Shop
             </Button>
-            <Button component={Link} to="/Contact" variant="outlined" sx={{ mx: 1 }}>
+            <Button component={Link} to="/HireMe" variant="outlined" sx={{ mx: 1 }}>
               Hire
             </Button>
           </Box>
