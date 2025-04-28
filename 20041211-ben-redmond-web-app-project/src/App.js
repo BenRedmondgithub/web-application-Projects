@@ -8,6 +8,7 @@ import PrintShopSection from "./components/PrintShopSection";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection  from "./components/CONTACT";
 import FOOTER from "./components/FOOTER"; 
+import Login from "./Pages/login.jsx";
 
 
 function HomePage() {
@@ -32,6 +33,7 @@ function App()
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/portfolio" element={<GalleryPage/>} />
+        <Route path="/login" element={<Login/>} />
      </Routes>
     </Router>
   );
