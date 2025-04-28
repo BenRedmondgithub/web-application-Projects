@@ -6,21 +6,18 @@ export default function Navbar() {
   return (
 
     <AppBar position="static" color="default" elevation={1}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography variant="h6" color="inherit" noWrap>
+        <Toolbar sx={{ justifyContent: "flex-start"}}>
+          <Typography component={Link} to="/" variant="h6" color="inherit" noWrap>
             Ben Redmond Photography
           </Typography>
           <Box>
-            <Button component={Link} to="/" color="inherit" sx={{ mx: 1 }}>
-              Home
-            </Button>
             <Button component={Link} to="/portfolio" color="outlined" sx={{ mx: 1 }}>
               Portfolio
             </Button>
-            <Button component={Link} to="/shop" variant="outlined" color="primary" sx={{ mx: 1 }}>
+            <Button component={Link} to="/shop" variant="outlined" sx={{ mx: 1 }}>
               Shop
             </Button>
-            <Button component={Link} to="/Contact" variant="outlined" color="primary" sx={{ mx: 1 }}>
+            <Button component={Link} to="/Contact" variant="outlined" sx={{ mx: 1 }}>
               Hire
             </Button>
           </Box>
