@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, TextField, Button, Typography, MenuItem, Stack } from '@mui/material'; // Fixed MenuItem import
-import { AdapterDataFns } from '@mui/x-date-pickers/AdapterDateFns'; // Fixed AdapterDateFns import
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'; // Fixed AdapterDateFns import
 import { LocalizationProvider, DateTimePicker } from '@mui/x-date-pickers'; // Added DateTimePicker import
 
 const HireMe = () => {
@@ -20,7 +20,7 @@ const HireMe = () => {
   };
 
   const handleDateChange = (newDate) => {
-    setFormData({ ...formData, date: newData });
+    setFormData({ ...formData, date: newDate });
   };
 
   const handleSubmit = () => {
@@ -32,21 +32,21 @@ const HireMe = () => {
       <Typography variant="h4" gutterBottom>
         Hire Me
       </Typography>
-      <LocalizationProvider dateAdapter={AdapterDataFns}>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
         <Stack spacing={2}>
           <TextField
             fullWidth
             label="Name"
-            value={formData.Name}
-            onChange={handleChange('Name')}
+            value={formData.name}
+            onChange={handleChange('name')}
             sx={{ mb: 2 }}
           />
           <TextField
             fullWidth
             label="Email"
             type="email"
-            value={formData.Email}
-            onChange={handleChange('Email')}
+            value={formData.email}
+            onChange={handleChange('email')}
             sx={{ mt: 2 }}
           />
           <TextField
@@ -63,10 +63,11 @@ const HireMe = () => {
               </MenuItem>
             ))}
           </TextField>
+
           <DateTimePicker
             label="Preferred Date"
             value={formData.date}
-            onChange={handleDataChange}
+            onChange={handleDateChange}
             renderInput={(params) => <TextField fullWidth {...params} />}
           />
           <TextField
@@ -74,8 +75,8 @@ const HireMe = () => {
             label="Additional Details"
             multiline
             rows={4}
-            value={formData.Message}
-            onChange={handleChange('Message')}
+            value={formData.message}
+            onChange={handleChange('message')}
           />
           <Button variant="contained" sx={{ mt: 2 }} onClick={handleSubmit}>
             Submit for Booking

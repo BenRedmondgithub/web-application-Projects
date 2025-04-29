@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom'; // Added useNavigate and Link
 import { Container, Typography, Box, Button } from "@mui/material";
 
 function PrintShopSection() {
@@ -17,19 +17,20 @@ function PrintShopSection() {
           variant="contained"
           color="secondary"
           size="large"
-          href="#"
+          component={Link} 
+          to="/shop"
         >
           Best Sellers
         </Button>
 
         <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            href="#"
+          variant="contained"
+          color="primary"
+          size="large"
+          component={Link} 
+          to="/shop"
         >
           New Arrivals
-        
         </Button>
         
         </Container>
