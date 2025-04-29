@@ -1,42 +1,87 @@
-import React, { useState } from 'react'; // Added useState
-import { useNavigate } from 'react-router-dom'; // Added useNavigate
-import { Container, TextField, Button, Typography } from '@mui/material'; // Add MenuItems, Stack tomorrow!!!
-//import {AdepterDateFns} from "@mui/x-date-pickers/AdapterDateFns"
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Container, TextField, Button, Typography, MenuItem, Stack } from '@mui/material'; // Fixed MenuItem import
+import { AdapterDataFns } from '@mui/x-date-pickers/AdapterDateFns'; // Fixed AdapterDateFns import
+import { LocalizationProvider, DateTimePicker } from '@mui/x-date-pickers'; // Added DateTimePicker import
 
 const HireMe = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  
-  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    shootType: '',
+    date: null,
+    message: '',
+  });
 
-  const handleLogin = () => {
-    if (username && password) {
-      localStorage.setItem('user', username);
-      navigate('/shop');
-    }
+  const shootType = ['Wedding', 'Portrait', 'Event', 'Product', 'Other'];
+
+  const handleChange = (field) => (e) => {
+    setFormData({ ...formData, [field]: e.target.value });
+  };
+
+  const handleDateChange = (newDate) => {
+    setFormData({ ...formData, date: newData });
+  };
+
+  const handleSubmit = () => {
+    console.log('Booking successful', formData);
   };
 
   return (
     <Container maxWidth="sm" sx={{ mt: 10 }}>
-      <Typography variant="h4" gutterBottom>Hire Me</Typography>
-
-      <TextField 
-      fullWidth 
-      label="Name" 
-      sx={{ mb: 2}}
-      onChange={e => setUsername(e.target.value)} 
-      />
-      
-      <TextField 
-        fullWidth 
-        label="Password" 
-        type="password" 
-        sx={{ mt: 2 }} 
-        onChange={e => setPassword(e.target.value)}
-      />
-
-      <Button variant="contained" sx={{ mt: 2 }} onClick={handleLogin}>Login</Button>
+      <Typography variant="h4" gutterBottom>
+        Hire Me
+      </Typography>
+      <LocalizationProvider dateAdapter={AdapterDataFns}>
+        <Stack spacing={2}>
+          <TextField
+            fullWidth
+            label="Name"
+            value={formData.Name}
+            onChange={handleChange('Name')}
+            sx={{ mb: 2 }}
+          />
+          <TextField
+            fullWidth
+            label="Email"
+            type="email"
+            value={formData.Email}
+            onChange={handleChange('Email')}
+            sx={{ mt: 2 }}
+          />
+          <TextField
+            fullWidth
+            select
+            label="Type of Shoot"
+            value={formData.shootType}
+            onChange={handleChange('shootType')}
+            sx={{ mt: 2 }}
+          >
+            {shootType.map((type) => (
+              <MenuItem key={type} value={type}>
+                {type}
+              </MenuItem>
+            ))}
+          </TextField>
+          <DateTimePicker
+            label="Preferred Date"
+            value={formData.date}
+            onChange={handleDataChange}
+            renderInput={(params) => <TextField fullWidth {...params} />}
+          />
+          <TextField
+            fullWidth
+            label="Additional Details"
+            multiline
+            rows={4}
+            value={formData.Message}
+            onChange={handleChange('Message')}
+          />
+          <Button variant="contained" sx={{ mt: 2 }} onClick={handleSubmit}>
+            Submit for Booking
+          </Button>
+        </Stack>
+      </LocalizationProvider>
     </Container>
   );
 };
