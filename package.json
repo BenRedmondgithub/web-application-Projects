@@ -1,0 +1,14 @@
+{
+  "name": "my-first-node-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
