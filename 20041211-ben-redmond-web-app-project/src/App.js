@@ -4,17 +4,17 @@ import Signup from "./Pages/Signup.jsx";
 import Navbar from "./components/Navbar.jsx";
 import GalleryPage from "./Pages/GalleryPage.jsx";
 import HireMe from "./Pages/Hire.jsx";
+import Shop from "./Pages/Shop.jsx";
+import Login from "./Pages/login.jsx";
 import HeroSection from "./components/HeroSection";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection  from "./components/CONTACT";
 import FOOTER from "./components/FOOTER"; 
-import Login from "./Pages/login.jsx";
 
 
 function HomePage() {
-
   return (
     <div>
       <HeroSection />
@@ -38,6 +38,7 @@ function App()
         <Route path="/login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/HireMe" element= {<HireMe/>} />
+        <Route path="/Shop" element={<Shop/>} />
      </Routes>
     </Router>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css"; 
-import { Container, Typography, AppBar, Toolbar, Box, Button } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 
 function HeroSection() {
   return (

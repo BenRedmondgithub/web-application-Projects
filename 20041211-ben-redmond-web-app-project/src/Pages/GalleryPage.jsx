@@ -2,9 +2,12 @@ import React from 'react'
 import { Container, Grid, Card, CardMedia, Typography } from '@mui/material'
 
 const portfolioItems = [
-    { title: 'Dublin 1', image: '/img/porttraits.png' }, // Fixed syntax
-    { title: 'Dublin 2', image: '/img/porttraits.png' },
-    { title: 'Dublin 3', image: '/img/porttraits.png' },
+    { title: 'Dublin 1', image: '/img/LE1.jpg' }, // Fixed syntax
+    { title: 'Dublin 2', image: '/img/_MG_7366.jpg' },
+    { title: 'Dublin 3', image: '/img/_MG_7709.jpg' },
+    { title: 'Dublin 4', image: '/img/_MG_9418.jpg' },
+    { title: 'Dublin 5', image: '/img/roses.jpg' },
+    { title: 'Dublin 6', image: '/img/streets.jpg' },
 ];
 
 export default function PortfolioPage() {
@@ -12,20 +15,24 @@ export default function PortfolioPage() {
     <Container sx={{ mt: 5 }}>
       <Grid container spacing={4}>
         {portfolioItems.map((item, index) => (
-          <Grid item xs={12} sm={6} md={6} key={index}>
-            <Card>
+          <Grid item xs={12} sm={7} md={7} key={index}>
+            <Card sx={{height: 550, display: 'flex', flexDirection: 'column'}} >
               <CardMedia
                 component="img"
                 height="200"
                 image={item.image}
                 alt={item.title}
                 sx={{
-                    height: '400',
-                    width: '100&',
-                    objectFit: 'cover'
+                  height: '450px',
+                  width: '100%',
+                  objectFit: 'contain',
+                  '&:hover': {
+                    transform: 'scale(1.07)',
+                    transition: 'transform 0.3s ease-in-out',
+                  },
                 }}
               />
-              <Typography variant="h6" sx={{ mt: 2, textAlign: 'center' }}>
+              <Typography variant="h6" sx={{ mt: 'auto', textAlign: 'center', py: 2 }}>
                 {item.title}
               </Typography>
             </Card>
