@@ -3,9 +3,9 @@ import { Container, Typography,Grid, Card, CardContent, CardActions, Box, CardMe
 
 const ShopItems = [
     {
-        title: "Portrait Shoots",
+        title: "Celbridge House",
         price: "€150",
-        image:"/img/Ving.jpg"
+        image:"/img/_MG_9418.jpg"
     },
     {
         title: "Event Photography",
@@ -24,6 +24,8 @@ function Shop() {
     return (
         <Container maxWidth="md" sx={{ mt: 15 }}>
             <Typography variant="h1" gutterBottom>Shop</Typography>
+            <Typography variant="h4" gutterBottom>Purchase prints of my work</Typography>
+            <Typography variant="h5" gutterBottom>All prints are 20x30cm and printed on high quality paper</Typography>
             <Grid container spacing={10} justifyContent="center">
                 {ShopItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
@@ -68,6 +70,9 @@ function Shop() {
             </Grid>
         </Container>
     );
+
+    
 }
+
 
 export default Shop;
