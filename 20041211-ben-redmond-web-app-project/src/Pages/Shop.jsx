@@ -4,19 +4,35 @@ import { Container, Typography,Grid, Card, CardContent, CardActions, Box, CardMe
 const ShopItems = [
     {
         title: "Celbridge House",
-        price: "€150",
+        price: "€15",
         image:"/img/_MG_9418.jpg"
     },
     {
-        title: "Event Photography",
-        price: "€200",
-        image:"/img/Crafting.jpg"
+        title: "Yellow Rose",
+        price: "€20",
+        image:"/img/roses.jpg"
+    },
+    {
+        title: "Dublin Docklands",	
+        price: "€20",
+        image:"/img/dublin.jpg"
     },
     {
         title: "Landscape Photography",
         price: "€200",
-        image:"/img/dublin.jpg"
+        image:"/img/elementor-placeholder-image.webp"
     },
+    {
+        title: "Landscape Photography",
+        price: "€200",
+        image:"/img/elementor-placeholder-image.webp"
+    },
+    {
+        title: "Landscape Photography",
+        price: "€200",
+        image:"/img/elementor-placeholder-image.webp"
+    },
+
 ];
 
 
