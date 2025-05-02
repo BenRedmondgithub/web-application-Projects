@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Typography,Grid, Card, CardContent, CardActions, Box, CardMedia, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ShopItems = [
     {
@@ -76,9 +77,11 @@ function Shop() {
                                 <Box component="span" sx={{ fontWeight: 'bold' }}>
                                     {item.price}
                                 </Box>
-                                <Button variant="contained" color="primary" fullWidth>
-                                    Add to Cart
-                                </Button>
+                                <Link to={`/product/${index}`} style={{ textDecoration: 'none', width: '100%' }}>
+                                    <Button variant="contained" color="primary" fullWidth>
+                                        View Details
+                                    </Button>
+                                </Link>
                             </CardActions>
                         </Card>
                     </Grid>

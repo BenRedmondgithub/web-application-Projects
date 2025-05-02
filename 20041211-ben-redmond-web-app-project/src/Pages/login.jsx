@@ -9,12 +9,34 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (username && password) {
-      localStorage.setItem('user', username);
-      navigate('/shop');
+      try {
+        const response = await fetch('http://localhost:5000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const handleLogout = () => {
+          localStorage.removeItem('user');
+          navigate('/');
+        }
+
+        if (response.ok) {
+          const data = await response.json();
+          localStorage.setItem('user', data.username);
+          navigate('/shop');
+        } else {
+          alert('Login failed. Please check your credentials.');
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+      }
     }
-  };
+  }
 
   return (
     <Container maxWidth="sm" sx={{ mt: 10 }}>

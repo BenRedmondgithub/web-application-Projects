@@ -9,11 +9,12 @@ import Login from "./Pages/login.jsx";
 import HeroSection from "./components/HeroSection";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
+import ItemDescription from "./components/ItemDescription.jsx";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection  from "./components/CONTACT";
 import FOOTER from "./components/FOOTER.jsx";
 //                                     {item.price}
-
+ 
 
 function HomePage() {
   return (
@@ -40,6 +41,7 @@ function App()
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/HireMe" element= {<HireMe/>} />
         <Route path="/Shop" element={<Shop/>} />
+        <Route path="/product/:id" element={<ItemDescription/>} />
      </Routes>
     </Router>
   );
