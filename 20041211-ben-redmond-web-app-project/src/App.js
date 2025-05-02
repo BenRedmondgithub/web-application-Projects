@@ -11,10 +11,8 @@ import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
 import ItemDescription from "./components/ItemDescription.jsx";
 import ServicesSection from "./components/ServicesSection";
-import ContactSection  from "./components/CONTACT";
+import ContactSection from "./components/CONTACT";
 import FOOTER from "./components/FOOTER.jsx";
-//                                     {item.price}
- 
 
 function HomePage() {
   return (
@@ -29,20 +27,20 @@ function HomePage() {
   );
 }
 
-function App() 
-{
+function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<GalleryPage/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/Signup" element={<Signup/>} />
-        <Route path="/HireMe" element= {<HireMe/>} />
-        <Route path="/Shop" element={<Shop/>} />
-        <Route path="/product/:id" element={<ItemDescription/>} />
-     </Routes>
+        <Route path="/portfolio" element={<GalleryPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/hireme" element={<HireMe />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/product/:id" element={<ItemDescription />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </Router>
   );
 }
