@@ -77,7 +77,7 @@ function Shop() {
                                 <Box component="span" sx={{ fontWeight: 'bold' }}>
                                     {item.price}
                                 </Box>
-                                <Link to={`/Cart/${index}`} style={{ textDecoration: 'none', width: '100%' }}>
+                                <Link to={`/product/${index}`} style={{ textDecoration: 'none', width: '100%' }}>
                                     <Button variant="contained" color="primary" fullWidth>
                                         View Details
                                     </Button>

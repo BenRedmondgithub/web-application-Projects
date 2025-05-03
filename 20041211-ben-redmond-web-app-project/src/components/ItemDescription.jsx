@@ -1,4 +1,7 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+import React from "react";
 
 const productList = [
     {
@@ -46,7 +49,24 @@ const ItemDescription = () => {
             <img src={product.image} alt={product.title} />
             <p>{product.description}</p>
             <p>Price: {product.price}</p>
-            <button>Add to Cart</button>
+            <Link to={`/cart/${product.id}`} style={{ textDecoration: 'none' }}>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    style={{ marginTop: '20px', backgroundColor: '#4CAF50', color: 'white' }}
+                    onClick={() => {
+                        const cartItems = JSON.parse(localStorage.getItem("Cart")) || [];
+                        const exists = cartItems.find(item => item.id === product.id);
+                        if (!exists) {
+                            cartItems.push(product);
+                            localStorage.setItem("Cart", JSON.stringify(cartItems));
+                        }
+                        window.location.href = `/cart/${id}`;
+                    }}
+                >
+                    Add to Cart
+                </Button>
+            </Link>
         </div>
     );
 };
