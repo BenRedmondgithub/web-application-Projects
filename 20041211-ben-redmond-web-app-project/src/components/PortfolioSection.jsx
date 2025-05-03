@@ -1,5 +1,3 @@
-// PortfolioSection.jsx
-// src/components/PortfolioSection.jsx
 import React from 'react';
 import { Button, Container, Typography, Grid, Card, CardMedia, CardContent } from '@mui/material';
 import { Link } from 'react-router-dom';

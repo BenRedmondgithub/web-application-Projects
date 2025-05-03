@@ -7,7 +7,7 @@ import HireMe from "./Pages/Hire.jsx";
 import Shop from "./Pages/Shop.jsx";
 import Login from "./Pages/login.jsx";
 import Cart from "./components/Cart.jsx";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./components/HeroSection.jsx";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
 import ItemDescription from "./components/ItemDescription.jsx";
@@ -27,6 +27,8 @@ function HomePage() {
     </div>
   );
 }
+
+
 
 function App() {
   return (

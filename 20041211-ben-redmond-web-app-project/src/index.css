@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e6f0f1;
 }
 
 code {
@@ -14,7 +13,6 @@ code {
 }
 
 .hero-section {
-  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGZpcnN0JTIwY29tcGFueSUyMGJpbGxpbmd8ZW58MHx8fHwxNjg5NTQ1NzA3&ixlib=rb-4.0.3&q=80&w=1080');
   background-size: cover;
   background-position: center;
   background-color: #b7d2e4;
@@ -31,15 +29,16 @@ code {
 h2 {
   font-size: 1rem;
   margin: 0;
-  padding-top: 300px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+  text-align: left;
 }
-h6 {
+h4 {
   font-size: 1rem;
   margin: 0;
   font-weight: 400;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
-} 
+}
