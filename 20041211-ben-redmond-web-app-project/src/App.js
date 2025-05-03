@@ -40,7 +40,7 @@ function App() {
         <Route path="/hireme" element={<HireMe />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/product/:id" element={<ItemDescription />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/:id" element={<Cart />} />
       </Routes>
     </Router>
   );
