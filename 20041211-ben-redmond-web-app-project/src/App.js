@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar.jsx";
 import GalleryPage from "./Pages/GalleryPage.jsx";
 import HireMe from "./Pages/Hire.jsx";
 import Shop from "./Pages/Shop.jsx";
+import SearchPage from "./components/searchPage.jsx";
 import Login from "./Pages/login.jsx";
 import Cart from "./components/Cart.jsx";
 import HeroSection from "./components/HeroSection.jsx";
@@ -44,6 +45,7 @@ function App() {
         <Route path="/product/:id" element={<ItemDescription />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/:id" element={<Cart />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Router>
   );

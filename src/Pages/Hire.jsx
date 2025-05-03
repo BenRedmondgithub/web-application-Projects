@@ -27,11 +27,9 @@ export default function Navbar() {
             <Button component={Link} to="/signup" color="outlined" sx={{ mx: 1 }}>
               Sign-up
             </Button>
-            <Button component={Link} to="/search" color="outlined" sx={{ mx: 1 }}>
-            Search
-          </Button>
           </Box>
-      </Toolbar>
-    </AppBar>
+          <Link to="/search">SEARCH</Link>
+        </Toolbar>
+      </AppBar>
   );
 }

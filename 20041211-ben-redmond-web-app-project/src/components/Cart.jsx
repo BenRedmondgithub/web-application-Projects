@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button"; // Added import for Button
 
 const Cart = () => { 
     const { id } = useParams();
@@ -18,6 +19,12 @@ const Cart = () => {
         return <div>Item not found in cart</div>;
     }
 
+    const handlePayPal = () => {
+        // Logic to handle PayPal payment can be added here
+        console.log("thanks for your order");
+        window.open("https://www.paypal.me/yournamehere", "_blank");
+    }
+
     return (
         <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
             {id ? (
@@ -27,12 +34,26 @@ const Cart = () => {
                     <p>{product.description}</p>
                     <p>Price: ${product.price}</p> 
                     <div style={{ display: 'flex', gap: '10px' }}>
-                        <button style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px' }}>
-                            Pay Pal
-                        </button>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            href="https://www.paypal.me/yournamehere"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={handlePayPal}
+                        >
+                            Pay with PayPal
+                        </Button>
                         <button 
                             onClick={() => removeFromCart(product.id)}
-                            style={{ padding: '10px 20px', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '5px' }}
+                            style={{ 
+                                padding: '10px 20px', 
+                                backgroundColor: '#f44336', 
+                                color: 'white', 
+                                border: 'none', 
+                                borderRadius: '5px' 
+                            }}
                         >
                             Remove from Cart
                         </button>
@@ -64,6 +85,7 @@ const Cart = () => {
                 </div>
             )}
         </div>
+
     );
 }
 
