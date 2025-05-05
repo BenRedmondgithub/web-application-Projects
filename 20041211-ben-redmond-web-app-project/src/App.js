@@ -8,7 +8,7 @@ import Shop from "./Pages/Shop.jsx";
 import SearchPage from "./components/searchPage.jsx";
 import Login from "./Pages/login.jsx";
 import Cart from "./components/Cart.jsx";
-import logout from "./Pages/logout.jsx";
+import Logout from "./Pages/logout.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import PortfolioSection from "./components/PortfolioSection";
 import PrintShopSection from "./components/PrintShopSection";
@@ -41,7 +41,7 @@ function App() {
         <Route path="/portfolio" element={<GalleryPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/logout" element={<logout />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/hireme" element={<HireMe />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/product/:id" element={<ItemDescription />} />

@@ -25,6 +25,7 @@ const Navbar = () => {
           <Typography component={Link} to="/" variant="h6" color="inherit" noWrap sx={{ mr: 2 }}>
             Ben Redmond Photography
           </Typography>
+          <Box sx={{ display: "flex", gap: 2 }}>
           {!user ? (
             <>
               <Button component={Link} to="/login" color="inherit" sx={{ mx: 1 }}>
@@ -33,30 +34,27 @@ const Navbar = () => {
               <Button component={Link} to="/signup" variant="outlined" sx={{ mx: 1 }}>
                 Sign-up
               </Button>
-            </>
-          ) : (
-            <Button onClick={handleLogout} color="inherit" sx={{ mx: 1 }}>
-              Logout
-            </Button>
-          )}
-        </Box>
-        <Box>
-          {user && (
-            <>
               <Button component={Link} to="/portfolio" variant="outlined" sx={{ mx: 1 }}>
                 Portfolio
               </Button>
+              <Button component={Link} to="/hireme" variant="outlined" sx={{ mx: 1 }}>
+                Hire Me
+              </Button>
+            </>
+          ) : (
+            <>
               <Button component={Link} to="/search" variant="outlined" sx={{ mx: 1 }}>
                 Search
               </Button>
+              <Button component={Link} to="/shop" variant="outlined" sx={{ mx: 1 }}>
+              Shop
+              </Button>
+              <Button onClick={handleLogout} color="inherit" sx={{ mx: 1 }}>
+                Logout
+              </Button>
             </>
           )}
-          <Button component={Link} to="/shop" variant="outlined" sx={{ mx: 1 }}>
-            Shop
-          </Button>
-          <Button component={Link} to="/HireMe" variant="outlined" sx={{ mx: 1 }}>
-            Hire
-          </Button>
+          </Box>
         </Box>
       </Toolbar>
     </AppBar>
