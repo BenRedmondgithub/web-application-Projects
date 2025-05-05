@@ -8,7 +8,6 @@ function HeroSection() {
         backgroundImage: "url('/img/ben-redmond-hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
         height: "100vh",
         width: "100%",
         display: "flex",
