@@ -25,7 +25,6 @@ function HomePage() {
       <PrintShopSection />
       <ServicesSection />
       <ContactSection />
-      <FOOTER />
     </div>
   );
 }
@@ -47,6 +46,7 @@ function App() {
         <Route path="/product/:id" element={<ItemDescription />} />
         <Route path="/search" element={<SearchPage />} />
       </Routes>
+      <FOOTER />
     </Router>
   );
 }

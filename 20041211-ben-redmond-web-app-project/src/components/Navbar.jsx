@@ -1,8 +1,44 @@
-import React from 'react';
-import { AppBar, Toolbar, Button, Typography, Box } from '@mui/material';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Button, Typography, Box, Drawer, IconButton, ListItem, ListItemText, List } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import MenuIcon from '@mui/icons-material/Menu';
 
-const Navbar = () => {
+const NavItems = [
+  { text: 'Home', path: '/' },
+  { text: 'Login', path: '/login' },
+  { text: 'Sign-up', path: '/signup' },
+  { text: 'Portfolio', path: '/portfolio' },
+  { text: 'Hire Me', path: '/hireme' },
+  { text: 'Shop', path: '/shop' },
+];
+
+const Navbar = () => { // Wrap the component in a function
+  const [mobileOpen, setMobileOpen] = useState(false); // Ensure this is inside the component
+  const isMobile = useMediaQuery('(max-width:1000px)'); // Removed extra space in useMediaQuery
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <Drawer anchor="left" open={mobileOpen} onClose={handleDrawerToggle}> {/* Fixed typo in 'amchor' */}
+      <List>
+        {NavItems.map((item, index) => (
+          <ListItem
+            button
+            key={index}
+            component={Link}
+            to={item.path}
+            onClick={handleDrawerToggle}
+          >
+            <ListItemText primary={item.text} />
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
+  );
+
   return (
     <AppBar position="static" color="default" elevation={1}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -10,13 +46,23 @@ const Navbar = () => {
           <Typography component={Link} to="/" variant="h6" color="inherit" noWrap sx={{ mr: 2 }}>
             Ben Redmond Photography
           </Typography>
-          <Box sx={{ display: "flex", gap: 2 }}>
-            <Button component={Link} to="/login">Login</Button>
-            <Button component={Link} to="/signup">Sign-up</Button>
-            <Button component={Link} to="/portfolio">Portfolio</Button>
-            <Button component={Link} to="/hireme">Hire Me</Button>
-            <Button component={Link} to="/shop">Shop</Button>
-          </Box>
+
+          {isMobile ? (
+            <>
+              <IconButton edge="start" color="inherit" onClick={handleDrawerToggle}>
+                <MenuIcon />
+              </IconButton>
+              {drawer}
+            </>
+          ) : (
+            <Box sx={{ display: "flex", gap: 2 }}>
+              {NavItems.map((item, index) => ( // Fixed incorrect variable name 'navItems' to 'NavItems'
+                <Button key={index} component={Link} to={item.path} variant="outlined">
+                  {item.text} {/* Fixed incorrect property 'label' to 'text' */}
+                </Button>
+              ))}
+            </Box>
+          )}
         </Box>
       </Toolbar>
     </AppBar>
