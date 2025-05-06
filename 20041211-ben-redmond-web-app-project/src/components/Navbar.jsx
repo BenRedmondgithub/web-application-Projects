@@ -20,21 +20,19 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
             Ben Redmond Photography
           </Typography>
           <Box sx={{ display: "flex", gap: 2 }}>
-            {!isAuthenticated ? (
+            (
               <>
                 <Button component={Link} to="/login">Login</Button>
                 <Button component={Link} to="/signup">Sign-up</Button>
                 <Button component={Link} to="/portfolio">Portfolio</Button>
                 <Button component={Link} to="/hireme">Hire Me</Button>
-              </>
-            ) : (
-              <>
+                <Button component={Link} to="/shop">Shop</Button>
                 <Button component={Link} to="/portfolio">Portfolio</Button>
                 <Button component={Link} to="/hireme">Hire Me</Button>
                 <Button component={Link} to="/shop">Shop</Button>
                 <Button onClick={handleLogout}>Logout</Button>
               </>
-            )}
+            )
           </Box>
         </Box>
       </Toolbar>
