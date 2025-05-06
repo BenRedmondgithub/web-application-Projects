@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from "./Pages/Signup.jsx";
 import Navbar from "./components/Navbar.jsx";
 import GalleryPage from "./Pages/GalleryPage.jsx";
@@ -15,6 +15,7 @@ import ItemDescription from "./components/ItemDescription.jsx";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/CONTACT";
 import FOOTER from "./components/FOOTER.jsx";
+import Cart from "./components/Cart.jsx"; // Ensure correct casing
 
 function HomePage() {
   return (
@@ -30,7 +31,6 @@ function HomePage() {
 }
 
 function App() {
-
   return (
     <Router>
       <Navbar />
@@ -42,6 +42,8 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/hireme" element={<HireMe />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} /> {/* Ensure correct casing */}
+        <Route path="/cart/:id" element={<Cart />} /> {/* Ensure correct casing */}
         <Route path="/product/:id" element={<ItemDescription />} />
         <Route path="/search" element={<SearchPage />} />
       </Routes>
