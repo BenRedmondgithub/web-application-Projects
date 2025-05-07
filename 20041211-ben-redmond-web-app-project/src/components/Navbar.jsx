@@ -9,7 +9,7 @@ const NavItems = [
   { text: 'Sign-up', path: '/signup' },
   { text: 'Portfolio', path: '/portfolio' },
   { text: 'Hire Me', path: '/hireme' },
-  { text: 'Shop', path: '/shop' },
+  { text: 'Explore', path: '/catalog' },
   { text: 'Search', path: '/search' },
 ];
 

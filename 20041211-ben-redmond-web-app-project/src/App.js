@@ -16,6 +16,7 @@ import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/CONTACT";
 import FOOTER from "./components/FOOTER.jsx";
 import Cart from "./components/Cart.jsx";
+import Catalog from "./Pages/Catalog.jsx";
 
 function HomePage() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/hireme" element={<HireMe />} />
+        <Route path="/catalog" element={<Catalog />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} /> {/* Ensure correct casing */}
         <Route path="/cart/:id" element={<Cart />} /> {/* Ensure correct casing */}

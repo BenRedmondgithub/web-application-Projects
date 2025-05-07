@@ -1,50 +1,76 @@
 import React from 'react';
 import { Container, Typography,Grid, Card, CardContent, CardActions, Box, CardMedia, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
 
 const ShopItems = [
     {
         title: "Celbridge House",
         price: "€15",
-        image:"/img/_MG_9418.jpg"
+        image: "/img/_MG_9418.jpg",
+        category: "celbridge", 
     },
     {
         title: "Yellow Rose",
         price: "€20",
-        image:"/img/roses.jpg"
+        image: "/img/roses.jpg",
+        category: "misc", 
     },
     {
-        title: "Dublin Docklands",	
+        title: "Dublin Docklands",
         price: "€20",
-        image:"/img/dublin.jpg"
+        image: "/img/dublin.jpg",
+        category: "dublin", // Add category for filtering
     },
     {
         title: "Through the Trees",
         price: "€15",
-        image:"/img/Untitled+(3).jpg"
+        image: "/img/Untitled+(3).jpg",
+        category: "dublin", // Add category for filtering
     },
     {
         title: "The Riverbank",
         price: "€15",
-        image:"/img/Untitled+(2) (1).jpg"
+        image: "/img/Untitled+(2) (1).jpg",
+        category: "celbridge", // Add category for filtering
     },
     {
         title: "A Nice View",
         price: "€20",
-        image:"/img/flowers.jpg"
+        image: "/img/flowers.jpg",
+        category: "misc", // Add category for filtering
     },
-
 ];
 
-
 function Shop() {
+
+    const query = useQuery();
+    const selectedCategory = query.get("category");
+
+    const filteredItems = selectedCategory
+        ? ShopItems.filter((item) => item.category === selectedCategory)
+        : ShopItems;
+
+
     return (
-        <Container maxWidth="md" sx={{ mt: 20 }}>
+        <Container maxWidth="md" sx={{ mt: 10 }}>
             <Typography variant='h3' marginBottom={5} >Shop</Typography>
             <Typography variant="h5" gutterBottom>Purchase prints of my work</Typography>
-            <Typography variant="h6" gutterBottom>All prints are 20x30cm and printed on high quality paper</Typography>
-            <Grid container spacing={10} justifyContent="center">
-                {ShopItems.map((item, index) => (
+            <Typography variant="h6" gutterBottom>
+                All prints are 20x30cm and printed on high quality paper
+            </Typography>
+            {selectedCategory && (
+            
+            <Typography variant="h4" align="center" gutterBottom>
+                {`Selected Category: ${selectedCategory}`}
+            </Typography>
+            )}
+
+            <Grid container spacing={5} justifyContent="center">
+                {filteredItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card sx={{
                             height: '100%',
