@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 
 const productList = [
@@ -45,10 +45,34 @@ const ItemDescription = () => {
 
     return (
         <div>
-            <h1>{product.title}</h1>
-            <img src={product.image} alt={product.title} />
-            <p>{product.description}</p>
-            <p>Price: {product.price}</p>
+            <Box sx={{ display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                gap: '2px' }}
+            >
+            <Typography variant="h1">
+                {product.title}
+            </Typography>
+
+            <Box
+                component="img"
+                src={product.image}
+                alt={product.title}
+                sm={{ 
+                width: "20%",
+                height: "auto",
+                marginBottom: 2,
+                borderRadius: 2,
+                }}
+            />
+            <Typography variant="h5" gutterBottom>
+                {product.description}           
+            </Typography>
+
+            <Typography variant="h5" gutterBottom>
+                Price : {product.price}
+            </Typography>
+
             <Link to={`/cart/${product.id}`} style={{ textDecoration: 'none' }}>
                 <Button
                     variant="contained"
@@ -67,6 +91,9 @@ const ItemDescription = () => {
                     Add to Cart
                 </Button>
             </Link>
+
+            </Box>
+
         </div>
     );
 };

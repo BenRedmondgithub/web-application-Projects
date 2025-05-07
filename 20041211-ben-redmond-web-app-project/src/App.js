@@ -15,7 +15,7 @@ import ItemDescription from "./components/ItemDescription.jsx";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/CONTACT";
 import FOOTER from "./components/FOOTER.jsx";
-import Cart from "./components/Cart.jsx"; // Ensure correct casing
+import Cart from "./components/Cart.jsx";
 
 function HomePage() {
   return (

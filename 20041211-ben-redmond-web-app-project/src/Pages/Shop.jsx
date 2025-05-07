@@ -19,19 +19,19 @@ const ShopItems = [
         image:"/img/dublin.jpg"
     },
     {
-        title: "Landscape Photography",
-        price: "€200",
-        image:"/img/elementor-placeholder-image.webp"
+        title: "Through the Trees",
+        price: "€15",
+        image:"/img/Untitled+(3).jpg"
     },
     {
-        title: "Landscape Photography",
-        price: "€200",
-        image:"/img/elementor-placeholder-image.webp"
+        title: "The Riverbank",
+        price: "€15",
+        image:"/img/Untitled+(2) (1).jpg"
     },
     {
-        title: "Landscape Photography",
-        price: "€200",
-        image:"/img/elementor-placeholder-image.webp"
+        title: "A Nice View",
+        price: "€20",
+        image:"/img/flowers.jpg"
     },
 
 ];
@@ -39,10 +39,10 @@ const ShopItems = [
 
 function Shop() {
     return (
-        <Container maxWidth="md" sx={{ mt: 15 }}>
-            <Typography variant="h1" gutterBottom>Shop</Typography>
-            <Typography variant="h4" gutterBottom>Purchase prints of my work</Typography>
-            <Typography variant="h5" gutterBottom>All prints are 20x30cm and printed on high quality paper</Typography>
+        <Container maxWidth="md" sx={{ mt: 20 }}>
+            <Typography variant='h3' marginBottom={5} >Shop</Typography>
+            <Typography variant="h5" gutterBottom>Purchase prints of my work</Typography>
+            <Typography variant="h6" gutterBottom>All prints are 20x30cm and printed on high quality paper</Typography>
             <Grid container spacing={10} justifyContent="center">
                 {ShopItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>

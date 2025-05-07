@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { TextField, Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
+import { TextField, Grid, Card, CardMedia, CardContent, Typography, Button,  } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const SearchPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -66,6 +67,11 @@ const SearchPage = () => {
                                     {item.description}
                                 </Typography>
                                 <Typography variant="h6">{item.price}</Typography>
+                                <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', width: '100%' }}>
+                                    <Button variant="contained" color="primary" fullWidth>
+                                        View Details
+                                    </Button>
+                                </Link>
                             </CardContent>
                         </Card>
                     </Grid>

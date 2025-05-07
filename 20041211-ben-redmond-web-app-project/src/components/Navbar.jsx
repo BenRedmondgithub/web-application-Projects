@@ -5,12 +5,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const NavItems = [
-  { text: 'Home', path: '/' },
   { text: 'Login', path: '/login' },
   { text: 'Sign-up', path: '/signup' },
   { text: 'Portfolio', path: '/portfolio' },
   { text: 'Hire Me', path: '/hireme' },
   { text: 'Shop', path: '/shop' },
+  { text: 'Search', path: '/search' },
 ];
 
 const Navbar = () => { // Wrap the component in a function
