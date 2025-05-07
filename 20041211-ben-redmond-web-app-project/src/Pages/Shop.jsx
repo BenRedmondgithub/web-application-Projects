@@ -19,19 +19,19 @@ const ShopItems = [
         image:"/img/dublin.jpg"
     },
     {
-        title: "Landscape Photography",
-        price: "€200",
-        image:"/img/elementor-placeholder-image.webp"
+        title: "Through the Trees",
+        price: "€15",
+        image:"/img/Untitled+(3).jpg"
     },
     {
-        title: "Landscape Photography",
-        price: "€200",
-        image:"/img/elementor-placeholder-image.webp"
+        title: "The Riverbank",
+        price: "€15",
+        image:"/img/Untitled+(2) (1).jpg"
     },
     {
-        title: "Landscape Photography",
-        price: "€200",
-        image:"/img/elementor-placeholder-image.webp"
+        title: "A Nice View",
+        price: "€20",
+        image:"/img/flowers.jpg"
     },
 
 ];
