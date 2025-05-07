@@ -39,10 +39,10 @@ const ShopItems = [
 
 function Shop() {
     return (
-        <Container maxWidth="md" sx={{ mt: 15 }}>
-            <Typography variant="h1" gutterBottom>Shop</Typography>
-            <Typography variant="h4" gutterBottom>Purchase prints of my work</Typography>
-            <Typography variant="h5" gutterBottom>All prints are 20x30cm and printed on high quality paper</Typography>
+        <Container maxWidth="md" sx={{ mt: 20 }}>
+            <Typography variant='h3' marginBottom={5} >Shop</Typography>
+            <Typography variant="h5" gutterBottom>Purchase prints of my work</Typography>
+            <Typography variant="h6" gutterBottom>All prints are 20x30cm and printed on high quality paper</Typography>
             <Grid container spacing={10} justifyContent="center">
                 {ShopItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
