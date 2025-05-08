@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Typography,Grid, Card, CardContent, CardActions, Box, CardMedia, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, Typography, Grid, Card, CardContent, CardActions, Box, CardMedia, Button } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
 function useQuery() {
@@ -8,70 +8,78 @@ function useQuery() {
 
 const ShopItems = [
     {
+        id: "celbridgehouse",
         title: "Celbridge House",
         price: "€15",
         image: "/img/_MG_9418.jpg",
-        category: "celbridge", 
+        description: "A beautiful photo of Celbridge House.",
+        category: "celbridge"
     },
     {
+        id: "yellowrose",
         title: "Yellow Rose",
         price: "€20",
         image: "/img/roses.jpg",
-        category: "misc", 
+        description: "A stunning yellow rose.",
+        category: "misc"
     },
     {
+        id: "dublindocklands",
         title: "Dublin Docklands",
         price: "€20",
         image: "/img/dublin.jpg",
-        category: "dublin", // Add category for filtering
+        description: "A scenic view of Dublin Docklands.",
+        category: "dublin"
     },
-    {
+    {   
+        id: "throughthetrees",
         title: "Through the Trees",
         price: "€15",
         image: "/img/Untitled+(3).jpg",
-        category: "dublin", // Add category for filtering
+        description: "A serene view through the trees.",
+        category: "dublin"
     },
-    {
+    {   
+        id: "riverbank",
         title: "The Riverbank",
         price: "€15",
         image: "/img/Untitled+(2) (1).jpg",
-        category: "celbridge", // Add category for filtering
+        description: "A peaceful riverbank scene.",
+        category: "celbridge"
     },
     {
+        id: "aniceview",
         title: "A Nice View",
         price: "€20",
         image: "/img/flowers.jpg",
-        category: "misc", // Add category for filtering
+        description: "A beautiful view of flowers.",
+        category: "misc"
     },
 ];
 
 function Shop() {
-
     const query = useQuery();
-    const selectedCategory = query.get("category");
-
+    const selectedCategory = query.get("category"); 
     const filteredItems = selectedCategory
-        ? ShopItems.filter((item) => item.category === selectedCategory)
-        : ShopItems;
-
+        ? ShopItems.filter(item => item.category === selectedCategory)
+        : ShopItems; 
 
     return (
         <Container maxWidth="md" sx={{ mt: 10 }}>
-            <Typography variant='h3' marginBottom={5} >Shop</Typography>
+            <Typography variant='h4' marginBottom={1}>Shop</Typography>
             <Typography variant="h5" gutterBottom>Purchase prints of my work</Typography>
             <Typography variant="h6" gutterBottom>
                 All prints are 20x30cm and printed on high quality paper
             </Typography>
             {selectedCategory && (
-            
-            <Typography variant="h4" align="center" gutterBottom>
-                {`Selected Category: ${selectedCategory}`}
-            </Typography>
+                <Typography variant="h4" align="center" gutterBottom>
+                    {`Selected Category: ${selectedCategory}`}
+                </Typography>
             )}
 
             <Grid container spacing={5} justifyContent="center">
                 {filteredItems.map((item, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Grid item xs={12} sm={6} md={4} key={item.id}>
                         <Card sx={{
                             height: '100%',
                             display: 'flex',
@@ -92,18 +100,18 @@ function Shop() {
                                 </Typography>
                             </CardContent>
                             <CardActions 
-                            sx={{
-                                width: '90%', 
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                gap: 2,
-                                pb: 2, 
-                                }}>
-
+                                sx={{
+                                    width: '90%', 
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    gap: 2,
+                                    pb: 2, 
+                                }}
+                            >
                                 <Box component="span" sx={{ fontWeight: 'bold' }}>
                                     {item.price}
                                 </Box>
-                                <Link to={`/product/${index}`} style={{ textDecoration: 'none', width: '100%' }}>
+                                <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', width: '100%' }}>
                                     <Button variant="contained" color="primary" fullWidth>
                                         View Details
                                     </Button>
@@ -115,9 +123,6 @@ function Shop() {
             </Grid>
         </Container>
     );
-
-    
 }
-
 
 export default Shop;

@@ -1,8 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import { Container, Typography, Grid, Card, CardContent, CardActions, CardMedia } from "@mui/material";
-
 import { Button } from "@mui/material";
 
 
@@ -22,8 +20,8 @@ const catalogItems = [
         category: "celbridge"
     },
     {
-        key: "landscape",
         title: "Miscellaneous",
+        key: "misc",
         description: "A grab bag of images.",
         image:"/img/flowers.jpg",
         category: "misc"
@@ -37,15 +35,6 @@ function Catalog() {
     const handleViewDetails = (key) => {
         navigate(`/shop?category=${key}`);
     };
-
-    const ShopItems = [
-        { title: "Celbridge House", category: "celbridge" },
-        { title: "Yellow Rose", category: "misc" },
-        { title: "Dublin Docklands", category: "dublin" },
-        { title: "Through the Trees", category: "dublin" },
-        { title: "The Riverbank", category: "celbridge" },
-        { title: "A Nice View", category: "misc" },
-    ];
 
     return ( 
         <Container sx={{ py:10 }}>
