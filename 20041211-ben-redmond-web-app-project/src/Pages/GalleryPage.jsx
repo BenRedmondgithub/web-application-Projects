@@ -1,13 +1,18 @@
 import React from 'react'
-import { Container, Grid, Card, CardMedia, Typography } from '@mui/material'
+import { Container, Grid, Card, CardMedia } from '@mui/material'
 
 const portfolioItems = [
-    { title: 'Dublin 1', image: '/img/LE1.jpg' }, // Fixed syntax
-    { title: 'Dublin 2', image: '/img/_MG_7366.jpg' },
-    { title: 'Dublin 3', image: '/img/_MG_7709.jpg' },
-    { title: 'Dublin 4', image: '/img/_MG_9418.jpg' },
-    { title: 'Dublin 5', image: '/img/roses.jpg' },
-    { title: 'Dublin 6', image: '/img/streets.jpg' },
+    { image: '/img/LE1.jpg' }, 
+    { image: '/img/_MG_7366.jpg' },
+    { image: '/img/_MG_7709.jpg' },
+    { image: '/img/_MG_9418.jpg' },
+    { image: '/img/roses.jpg' },
+    { image: '/img/streets.jpg'},
+    { image: '/img/Untitled+(10).jpg'},
+    { image: '/img/Untitled+(3).jpg'},
+    { image: '/img/Untitled+(12).jpg'},
+    { image: '/img/Untitled+(15).jpg'},
+    { image: '/img/Untitled+(2) (1).jpg'},
 ];
 
 export default function PortfolioPage() {
@@ -15,26 +20,24 @@ export default function PortfolioPage() {
     <Container sx={{ mt: 5 }}>
       <Grid container spacing={4}>
         {portfolioItems.map((item, index) => (
-          <Grid item xs={12} sm={7} md={7} key={index}>
-            <Card sx={{height: 550, display: 'flex', flexDirection: 'column'}} >
+          <Grid item sx={10} sm={8} md={8} key={index}>
+            <Card sx={{
+              height: 200,
+              width: '100%', 
+              display: 'flex', 
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}>
               <CardMedia
                 component="img"
-                height="200"
+                height="800"
                 image={item.image}
-                alt={item.title}
                 sx={{
-                  height: '450px',
-                  width: '100%',
-                  objectFit: 'contain',
-                  '&:hover': {
-                    transform: 'scale(1.07)',
-                    transition: 'transform 0.3s ease-in-out',
-                  },
+                  height: '200px',
+                  width: "100%",
+                  objectFit:'cover',
                 }}
               />
-              <Typography variant="h6" sx={{ mt: 'auto', textAlign: 'center', py: 2 }}>
-                {item.title}
-              </Typography>
             </Card>
           </Grid>
         ))}

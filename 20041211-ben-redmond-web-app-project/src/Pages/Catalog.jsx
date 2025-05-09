@@ -38,10 +38,19 @@ function Catalog() {
 
     return ( 
         <Container sx={{ py:10 }}>
-            <Typography variant="h4" align="center" gutterBottom>
+            <Typography variant="h4" align="center" gutterBottom 
+            sx={{ fontWeight: 'bold' 
+            , color: '#000000', mb: 4, textTransform: 'uppercase'
+            }}>
                 Photo Catalog
             </Typography>
-            <Typography variant="h4" align="center" gutterBottom>
+            <Typography variant="h4" align="center" gutterBottom
+            sx={{ 
+                fontWeight: 'bold' , 
+                color: '#000000', 
+                mb: 4, 
+                textTransform: 'uppercase'
+            }}>
                 Explore Our Collection
             </Typography>
             

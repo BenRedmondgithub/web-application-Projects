@@ -36,8 +36,7 @@ const Cart = () => {
                     <div style={{ display: 'flex', gap: '10px' }}>
                         <Button
                             variant="contained"
-                            color="primary"
-                            fullWidth
+                            color="#6b44ad"
                             href="https://www.paypal.me/yournamehere"
                             target="_blank"
                             rel="noopener noreferrer"
