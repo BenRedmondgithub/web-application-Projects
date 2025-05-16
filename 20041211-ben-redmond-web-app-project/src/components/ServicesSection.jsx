@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, Typography, Grid, Card, CardContent, CardActions, Box, CardMedia } from "@mui/material";
+import { blue } from "@mui/material/colors";
 
 const services = [
     {
@@ -26,7 +27,13 @@ const services = [
 function ServicesSection() { 
     return ( 
         <Container sx={{ py:25 }}>
-            <Typography variant="h4" align="center" gutterBottom>
+            <Typography variant="h5" align="center" gutterBottom
+            sx={{
+            color: "white", 
+            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", 
+            fontFamily: "'Reenie Beanie', cursive",
+            fontSize: "5rem",
+            }}>
                 Services
             </Typography>
             <Grid container spacing={10} justifyContent="center">
@@ -34,6 +41,7 @@ function ServicesSection() {
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card sx={{
                             height: '100%',
+                            backgroundColor: blue,
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'space-between',
