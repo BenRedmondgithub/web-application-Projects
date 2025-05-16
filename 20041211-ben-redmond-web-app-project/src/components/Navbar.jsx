@@ -10,7 +10,6 @@ const NavItems = [
   { text: 'Portfolio', path: '/portfolio' },
   { text: 'Hire Me', path: '/hireme' },
   { text: 'Explore', path: '/catalog' },
-  { text: 'Search', path: '/search' },
 ];
 
 const Navbar = () => { // Wrap the component in a function

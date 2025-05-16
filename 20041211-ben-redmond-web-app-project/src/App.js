@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar.jsx";
 import GalleryPage from "./Pages/GalleryPage.jsx";
 import HireMe from "./Pages/Hire.jsx";
 import Shop from "./Pages/Shop.jsx";
-import SearchPage from "./components/searchPage.jsx";
 import Login from "./Pages/login.jsx";
 import Logout from "./Pages/logout.jsx";
 import HeroSection from "./components/HeroSection.jsx";
@@ -46,7 +45,6 @@ function App() {
         <Route path="/cart" element={<Cart />} /> {/* Ensure correct casing */}
         <Route path="/cart/:id" element={<Cart />} /> {/* Ensure correct casing */}
         <Route path="/product/:id" element={<ItemDescription />} />
-        <Route path="/search" element={<SearchPage />} />
       </Routes>
       <FOOTER />
     </Router>
