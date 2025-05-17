@@ -42,7 +42,7 @@ function PortfolioSection() {
                                 alt={item.title}
                                 sx={{objectFit: 'cover'}}
                             />
-                            <CardContent sx={{ textAlign: 'center', }}>
+                            <CardContent sx={{ textAlign: 'center', fontFamily: "'Reenie Beanie', cursive",  }}>
                             <Typography>
                                 {item.title}
                             </Typography>    
