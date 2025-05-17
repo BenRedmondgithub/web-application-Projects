@@ -22,13 +22,19 @@ function PortfolioSection() {
     return (
         <div style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
         <Container sx={{ py: 15 }}>
-            <Typography variant="h3" align="center" gutterBottom>
+            <Typography variant="h3" align="center" gutterBottom sx={{ fontFamily: "'Reenie Beanie', cursive", fontSize: "8rem" }}>
                 Portfolio
             </Typography>
             <Grid container spacing={10} justifyContent="center">
                 {portfolioItems.map((item, index) => (
                     <Grid item xs={12} sm={6} md={6} key={index}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <Card sx={{ 
+                            height: '100%', 
+                            display: 'flex', 
+                            flexDirection: 'column', 
+                            fontFamily: "'Reenie Beanie', cursive", 
+                            fontSize: "2rem" }}>
+                        
                             <CardMedia
                                 component="img"
                                 height="300"
@@ -36,7 +42,7 @@ function PortfolioSection() {
                                 alt={item.title}
                                 sx={{objectFit: 'cover'}}
                             />
-                            <CardContent sx={{ textAlign: 'center' }}>
+                            <CardContent sx={{ textAlign: 'center', }}>
                             <Typography>
                                 {item.title}
                             </Typography>    

@@ -42,8 +42,8 @@ function App() {
         <Route path="/hireme" element={<HireMe />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} /> {/* Ensure correct casing */}
-        <Route path="/cart/:id" element={<Cart />} /> {/* Ensure correct casing */}
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/:id" element={<Cart />} /> 
         <Route path="/product/:id" element={<ItemDescription />} />
       </Routes>
       <FOOTER />

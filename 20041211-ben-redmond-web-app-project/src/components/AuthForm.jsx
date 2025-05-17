@@ -45,7 +45,9 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 10 }}>
+    <Container maxWidth="sm" sx={{ 
+      mt: 10, 
+      backgroundColor: 'white',}}>
       <Typography variant="h4" gutterBottom>
         {mode === 'signin' ? 'Sign In' : 'Sign Up'}
       </Typography>

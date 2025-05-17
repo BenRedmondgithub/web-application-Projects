@@ -23,6 +23,7 @@ function HeroSection() {
         >
           Ben Redmond Photography
         </Typography>
+        
         <Typography
           variant="h4"
           gutterBottom

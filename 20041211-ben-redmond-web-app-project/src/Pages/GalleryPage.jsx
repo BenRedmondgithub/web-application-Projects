@@ -1,8 +1,8 @@
 import React from 'react'
-import { Container, Grid, Card, CardMedia } from '@mui/material'
+import { Grid, Card, CardMedia, Box, Typography } from '@mui/material'
+import '../App.css'; // Import your CSS file
 
 const portfolioItems = [
-    { image: '/img/LE1.jpg' }, 
     { image: '/img/_MG_7366.jpg' },
     { image: '/img/_MG_7709.jpg' },
     { image: '/img/_MG_9418.jpg' },
@@ -17,31 +17,43 @@ const portfolioItems = [
 
 export default function PortfolioPage() {
   return (
-    <Container sx={{ mt: 5 }}>
-      <Grid container spacing={4}>
+    <Box sx={{ 
+      minHeight: "100vh", 
+      px: 2,
+      pt: 10,
+      pb: 6,
+     }}>
+
+      <Typography variant="h1" gutterBottom
+        sx={{ color: "black", 
+          textShadow: "5px 5px 8px rgba(124, 124, 124, 0.7)", 
+          fontFamily: "'Reenie Beanie', cursive",
+          fontSize: "10rem", 
+          textAlign: "center",}}>
+
+        Portfolio
+      
+      </Typography>
+
+      <Grid container spacing={5} justifyContent="center">
         {portfolioItems.map((item, index) => (
-          <Grid item sx={10} sm={8} md={8} key={index}>
-            <Card sx={{
-              height: 200,
-              width: '100%', 
-              display: 'flex', 
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card sx={{ borderRadius: 1, boxShadow: 'none'}}>
               <CardMedia
                 component="img"
-                height="800"
                 image={item.image}
+                alt={`Portfolio item ${index + 1}`}
                 sx={{
-                  height: '200px',
                   width: "100%",
-                  objectFit:'cover',
+                  height: 250,
+                  objectFit: "cover",
+                  border: "5px solid black",
                 }}
               />
             </Card>
           </Grid>
         ))}
       </Grid>
-    </Container>
-  )
+    </Box>
+  );
 }

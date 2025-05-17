@@ -12,16 +12,16 @@ const NavItems = [
   { text: 'Explore', path: '/catalog' },
 ];
 
-const Navbar = () => { // Wrap the component in a function
-  const [mobileOpen, setMobileOpen] = useState(false); // Ensure this is inside the component
-  const isMobile = useMediaQuery('(max-width:1000px)'); // Removed extra space in useMediaQuery
+const Navbar = () => { 
+  const [mobileOpen, setMobileOpen] = useState(false); 
+  const isMobile = useMediaQuery('(max-width:1000px)'); 
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <Drawer anchor="left" open={mobileOpen} onClose={handleDrawerToggle}> {/* Fixed typo in 'amchor' */}
+    <Drawer anchor="left" open={mobileOpen} onClose={handleDrawerToggle}> 
       <List>
         {NavItems.map((item, index) => (
           <ListItem
@@ -42,7 +42,17 @@ const Navbar = () => { // Wrap the component in a function
     <AppBar position="static" color="default" elevation={1}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Typography component={Link} to="/" variant="h6" color="inherit" noWrap sx={{ mr: 2 }}>
+          <Typography 
+            component={Link}
+            to="/"
+            variant="h4"
+            color="inherit"
+            noWrap
+            sx={{
+              mr: 2,
+              fontFamily: "'Dancing Script', cursive",
+            }}
+          >
             Ben Redmond Photography
           </Typography>
 
@@ -54,10 +64,15 @@ const Navbar = () => { // Wrap the component in a function
               {drawer}
             </>
           ) : (
-            <Box sx={{ display: "flex", gap: 2 }}>
-              {NavItems.map((item, index) => ( // Fixed incorrect variable name 'navItems' to 'NavItems'
-                <Button key={index} component={Link} to={item.path} variant="outlined">
-                  {item.text} {/* Fixed incorrect property 'label' to 'text' */}
+            <Box 
+            sx={{ display: "flex", gap: 2,}}>
+              {NavItems.map((item, index) => ( 
+                <Button key={index} component={Link} to={item.path} variant="outlined" 
+                sx={{ fontFamily: "'Reenie Beanie', cursive", 
+                color: "black",
+                fontSize: "1.3rem",
+                }}>
+                  {item.text}
                 </Button>
               ))}
             </Box>

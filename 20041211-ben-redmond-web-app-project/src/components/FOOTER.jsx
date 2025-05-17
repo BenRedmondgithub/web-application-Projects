@@ -7,21 +7,21 @@ export default function FOOTER() {
   return (
     <Box
         sx={{
-            color: '#000',
+            backgroundColor: '#f5f5f5',
             textAlign: 'center',
-            padding: '20px',
+            padding: '10px',
         }}
     >
       <Box>
-           <Typography variant='body2' gutterBottom>
+           <Typography variant='body2' gutterBottom sx={{ fontFamily: "'Reenie Beanie', cursive", fontSize: "2rem" }}>
             © 2025 Ben Redmond. All rights reserved
             </Typography>
 
-            <Typography variant='body2' gutterBottom> 
+            <Typography variant='body2' gutterBottom sx={{ fontFamily: "'Reenie Beanie', cursive", fontSize: "1.9rem" }}> 
                 Website by Ben Redmond 
             </Typography>
 
-            <Typography variant='body2'> 
+            <Typography variant='body2' gutterBottom sx={{ fontFamily: "'Reenie Beanie', cursive", fontSize: "1.7rem" }}> 
                 Follow me on social media: 📷 
             </Typography> 
         </Box>
@@ -33,7 +33,12 @@ export default function FOOTER() {
                 href="https://www.instagram.com/benrdslr/"
                 target="_blank"
                 rel="noopener"
-                sx={{ mx: 1, color: '#000', borderColor: '#000' }} // Fixed typo in borderColor
+                sx={{ 
+                    mx: 1, 
+                    color: '#000', 
+                    borderColor: '#000',
+                    fontFamily: "'Reenie Beanie', cursive"
+                 }}
             >
                 Instagram
             </Button>
@@ -44,7 +49,11 @@ export default function FOOTER() {
                 href="https://www.facebook.com/benredmondphotography"
                 target="_blank"
                 rel="noopener"
-                sx={{ mx: 1, color: '#000', borderColor: '#000' }} // Fixed typo in borderColor
+                sx={{ 
+                    mx: 1, 
+                    color: '#000', 
+                    borderColor: '#000', 
+                    fontFamily: "'Reenie Beanie', cursive"}} // Fixed typo in borderColor
             >
                 Facebook
             </Button>
