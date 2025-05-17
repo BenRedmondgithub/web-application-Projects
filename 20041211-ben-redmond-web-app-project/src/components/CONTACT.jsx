@@ -27,7 +27,7 @@ function ContactForm() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: "rgb(72, 123, 141)",
+        background: "rgb(60, 73, 128)",
         py: 10,
       }}
     >
@@ -35,13 +35,20 @@ function ContactForm() {
         {!submitted ? (
           <>
             <Typography
-              variant="h3"
+              variant="h1"
               gutterBottom
-              sx={{ mb: 10, display: "flex", justifyContent: "center" }}
+              sx={{ mb: 5, display: "flex", justifyContent: "center", color:"white", fontFamily: "'Reenie Beanie', cursive", }}
             >
               Get in Touch
             </Typography>
-            <Typography variant="h6" gutterBottom sx={{ mb: 8 }}>
+            <Typography variant="h2" gutterBottom 
+            sx={{ 
+                mb: 5, 
+                color:"white", 
+                fontFamily: "'Reenie Beanie', cursive", 
+                justifyContent: "center",
+                fontSize: "3rem",
+                }}>
               We would love to hear from you!
             </Typography>
 
