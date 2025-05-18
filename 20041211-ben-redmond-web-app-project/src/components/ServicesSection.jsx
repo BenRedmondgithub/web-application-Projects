@@ -26,7 +26,7 @@ const services = [
 
 function ServicesSection() { 
     return ( 
-        <Container sx={{ py:2}}>
+        <Container sx={{ py:8}}>
             <Typography variant="h5" align="center" gutterBottom
             sx={{
             color: "white", 
@@ -55,14 +55,21 @@ function ServicesSection() {
                                 alt={service.title}
                             />
                             <CardContent>
-                                <Typography variant="h5" align="center">
+                                <Typography variant="h5" align="center"
+                                    sx={{ fontFamily: "'Dancing Script', cursive", color: 'black', fontSize: "2rem" }}>
                                     {service.title}
                                 </Typography>
-                                <Typography variant="body2" align="center">
+                                <Typography variant="body2" align="center"
+                                sx={{ fontFamily: "'Reenie Beanie', cursive", color: 'black', fontSize: "1.9rem" }}>
                                     {service.description}
                                 </Typography>
                             </CardContent>
-                            <CardActions sx={{ justifyContent: "center" }}>
+                            <CardActions 
+                            sx={{ 
+                                justifyContent: "center", 
+                                fontFamily: "'Reenie Beanie', cursive", 
+                                color: 'black', 
+                                fontSize: "1.9rem"}}>
                                 <Box component="span" sx={{ fontWeight: 'bold' }}>
                                     {service.price}
                                 </Box>
