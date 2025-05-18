@@ -66,13 +66,29 @@ function Shop() {
 
     return (
         <Container maxWidth="md" sx={{ mt: 10 }}>
-            <Typography variant='h4' marginBottom={1}>Shop</Typography>
-            <Typography variant="h5" gutterBottom>Purchase prints of my work</Typography>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant='h4' marginBottom={1} 
+            sx={{
+                fontFamily: "'Dancing Script', cursive",
+                color: 'black',
+                fontSize: "4rem",
+            }} 
+            >Shop</Typography>
+            <Typography variant="h5" gutterBottom
+            sx={{
+                fontFamily: "'Reenie Beanie', cursive",
+                fontSize: "2.5rem",
+            }} >Purchase prints of my work</Typography>
+            <Typography variant="h6" gutterBottom
+            sx={{
+                fontFamily: "'Reenie Beanie', cursive",
+                fontSize: "2.1rem",
+            }} >
                 All prints are 20x30cm and printed on high quality paper
             </Typography>
             {selectedCategory && (
-                <Typography variant="h4" align="center" gutterBottom>
+                <Typography variant="h4" align="center" gutterBottom
+                sx={{
+                    fontFamily: "'Reenie Beanie', cursive", }} >
                     {`Selected Category: ${selectedCategory}`}
                 </Typography>
             )}
@@ -86,7 +102,9 @@ function Shop() {
                             flexDirection: 'column',
                             justifyContent: 'space-between',
                             maxWidth: 345,
-                            mx: 'auto', 
+                            mx: 'auto',
+                            fontFamily: "'Reenie Beanie', cursive",
+                            fontSize: "2.1rem",
                         }}>
                             <CardMedia
                                 component="img"
@@ -95,7 +113,8 @@ function Shop() {
                                 alt={item.title}
                             />
                             <CardContent>
-                                <Typography variant="h5" align="center">
+                                <Typography variant="h5" align="center"
+                                    sx={{ fontFamily: "'Dancing Script', cursive", fontSize: "2rem" }}>
                                     {item.title}
                                 </Typography>
                             </CardContent>
@@ -105,14 +124,17 @@ function Shop() {
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     gap: 2,
-                                    pb: 2, 
+                                    pb: 2,
+                                    fontFamily: "'Reenie Beanie', cursive",
+                                    fontSize: "2.1rem", 
                                 }}
                             >
                                 <Box component="span" sx={{ fontWeight: 'bold' }}>
                                     {item.price}
                                 </Box>
                                 <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', width: '100%' }}>
-                                    <Button variant="contained" color="primary" fullWidth>
+                                    <Button variant="contained" color="primary" fullWidth
+                                        sx={{ fontFamily: "'Reenie Beanie', cursive", fontSize: "1.5rem" }}>
                                         View Details
                                     </Button>
                                 </Link>

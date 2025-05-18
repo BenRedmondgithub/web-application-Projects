@@ -39,25 +39,29 @@ function Catalog() {
     return ( 
         <Container sx={{ py:10 }}>
             <Typography variant="h4" align="center" gutterBottom 
-            sx={{ fontWeight: 'bold' 
-            , color: '#000000', mb: 4, textTransform: 'uppercase'
+            sx={{  
+                fontFamily: "'Dancing Script', cursive",
+                color: '#000000', 
+                mb: 4,
+                fontSize: "4rem",
             }}>
                 Photo Catalog
             </Typography>
-            <Typography variant="h4" align="center" gutterBottom
-            sx={{ 
-                fontWeight: 'bold' , 
+            <Typography variant="h4" align="center" gutterBottom 
+            sx={{  
                 color: '#000000', 
                 mb: 4, 
-                textTransform: 'uppercase'
+                fontFamily: "'Reenie Beanie', cursive",
+                fontSize: "3.5rem",
             }}>
                 Explore Our Collection
             </Typography>
             
-            <Grid container spacing={10} justifyContent="center">
+            <Grid container spacing={1} justifyContent="center">
                 {catalogItems.map((category, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card sx={{
+                            fontFamily: "'Reenie Beanie', cursive",
                             height: '100%',
                             display: 'flex',
                             flexDirection: 'column',
@@ -72,15 +76,17 @@ function Catalog() {
                                 alt={category.title}
                             />
                             <CardContent>
-                                <Typography variant="h5" align="center">
+                                <Typography variant="h5" align="center"
+                                    sx={{ fontFamily: "'Dancing Script', cursive", color: 'black', fontSize: "3rem" }}>
                                     {category.title}
                                 </Typography>
-                                <Typography variant="body2" align="center">
+                                <Typography variant="body2" align="center"
+                                sx={{ fontFamily: "'Reenie Beanie', cursive", color: 'black', fontSize: "2.5rem" }}>
                                     {category.description}
                                 </Typography>
                             </CardContent>
                             <CardActions sx={{ justifyContent: 'center' }}>
-                                <Button variant="contained"
+                                <Button variant="contained" sx={{fontFamily: "'Reenie Beanie', cursive", fontSize: "1.8rem"}}
                                 color="primary" 
                                 onClick={() => handleViewDetails(category.key)}
                                  >

@@ -7,9 +7,11 @@ export default function FOOTER() {
   return (
     <Box
         sx={{
+            display: 'flex',
+            flexDirection: 'column',
             backgroundColor: '#f5f5f5',
             textAlign: 'center',
-            padding: '10px',
+            minHeight: '100vh',
         }}
     >
       <Box>

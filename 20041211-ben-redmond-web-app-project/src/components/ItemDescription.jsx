@@ -85,7 +85,10 @@ const ItemDescription = () => {
                 alignItems: 'center', 
                 gap: '2px' }}
             >
-            <Typography variant="h1">
+            <Typography variant="h1" 
+            sx={{
+                fontFamily: "'Dancing Script', cursive",
+            }}>
                 {product.title}
             </Typography>
 
@@ -100,22 +103,32 @@ const ItemDescription = () => {
                 borderRadius: 2,
                 }}
             />
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom sx={{
+                fontFamily: "'Reenie Beanie', cursive",
+                fontSize: "2.5rem",
+            }}>
                 {product.description}           
             </Typography>
 
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom 
+            sx={{
+                fontFamily: "'Reenie Beanie', cursive",
+                fontSize: "2.5rem",
+            }}>
                 Price : {product.price}
             </Typography>
 
             <Button
                 variant="contained"
                 color="primary"
-                fullWidth
                 href="https://www.paypal.me/yournamehere"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handlePayPal}
+                sx={{
+                    fontFamily: "'Reenie Beanie', cursive",
+                    fontSize: "3rem",
+                }}
                 >
                 Pay with PayPal
             </Button>
@@ -126,8 +139,11 @@ const ItemDescription = () => {
                     backgroundColor: '#f44336', 
                     color: 'white', 
                     border: 'none', 
-                    borderRadius: '5px' 
+                    borderRadius: '5px',
+                    fontFamily: "'Reenie Beanie', cursive",
+                    fontSize: '1.5rem',
                     }}>
+
                     Remove from Cart
             </button>
 
