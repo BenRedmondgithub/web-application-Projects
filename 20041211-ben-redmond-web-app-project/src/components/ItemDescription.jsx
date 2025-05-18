@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { Box, Button, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-
 const productList = [
     {
         id: "celbridgehouse",
@@ -154,3 +153,4 @@ const ItemDescription = () => {
 };
 
 export default ItemDescription;
+

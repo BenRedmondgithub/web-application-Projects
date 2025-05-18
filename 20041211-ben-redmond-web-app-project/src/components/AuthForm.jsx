@@ -2,7 +2,6 @@ import React, { useState } from 'react'; // Added useState
 import { useLocation, useNavigate } from 'react-router-dom'; // Added useNavigate
 import { Container, TextField, Button, Typography } from '@mui/material';
 
-
 const AuthForm = ({ mode, setIsAuthenticated }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -10,7 +9,6 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
-
 
   const handleAuth = async () => {
     if (!email || !password) {
@@ -31,7 +29,6 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
             localStorage.setItem('user', JSON.stringify( { email }));
             setIsAuthenticated(true);
             navigate("/");
-
 
         } else {
             const errorData = await response.json();
@@ -75,3 +72,4 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
 };
 
 export default AuthForm;
+
