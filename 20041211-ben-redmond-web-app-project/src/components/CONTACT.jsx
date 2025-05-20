@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './index.css';
 import { Container, Typography, Box, Button } from "@mui/material";
-import { db } from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase"; 
+import { addDoc, collection } from "firebase/firestore";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -41,6 +41,8 @@ function ContactForm() {
       console.error("Error adding document: ", error);
     }
   };
+
+
 
   return (
     <Box

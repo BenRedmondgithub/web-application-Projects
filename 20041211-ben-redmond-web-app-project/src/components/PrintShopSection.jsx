@@ -45,7 +45,7 @@ function PrintShopSection() {
           color="secondary"
           size="large"
           component={Link} 
-          to="/shop"
+          to="/catalog"
           sx={{fontFamily: "'Dancing Script', cursive",
             fontSize: "1.6rem",
           }}

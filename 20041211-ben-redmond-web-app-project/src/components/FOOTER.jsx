@@ -11,7 +11,8 @@ export default function FOOTER() {
             flexDirection: 'column',
             backgroundColor: '#f5f5f5',
             textAlign: 'center',
-            minHeight: '100vh',
+            minHeight: '33vh',
+            padding: 6,
         }}
     >
       <Box>
