@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using system.Collections.Generic;
+using System.Collections.Generic;
+using WebApplication1.Modules;
 
 namespace BookAPI.Controllers
 {
@@ -7,7 +8,7 @@ namespace BookAPI.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-       private book[] _books = new book[]
+       private book[] _books = new Book[]
        {
 
         new book{ID = 1, Author = "Author One", Title = "Book One"},
@@ -16,7 +17,7 @@ namespace BookAPI.Controllers
        
        };
 
-       [httpGet]
+       [HttpGet]
        public ActionResult<IEnumerable<book>> GetBooks()
        {
         return Ok(_books);
