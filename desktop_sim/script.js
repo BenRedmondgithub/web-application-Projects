@@ -1,11 +1,5 @@
-console.log("script.js loaded");
+document.getElementById("launchApp").addEventListener("click", () => {
 
-if (typeof WinBox === "undefined") {
-  console.error("❌ WinBox is undefined");
-} else {
-  console.log("✅ WinBox is ready");
-
-  document.getElementById("launchApp").addEventListener("click", () => {
     new WinBox("My App", {
       width: "400px",
       height: "300px",
@@ -20,4 +14,3 @@ if (typeof WinBox === "undefined") {
       }
     });
   });
-}
