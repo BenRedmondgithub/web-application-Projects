@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, TextField, Button, Typography, MenuItem, Stack } from '@mui/material'; // Fixed MenuItem import
+import { Container, TextField, Button, Typography, MenuItem, Stack, Box } from '@mui/material'; // Fixed MenuItem import
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'; // Fixed AdapterDateFns import
 import { LocalizationProvider, DateTimePicker } from '@mui/x-date-pickers'; // Added DateTimePicker import
 import { db } from '../firebase'; // Adjust the import path as necessary
@@ -16,7 +16,7 @@ function HireMe() {
 
   const shootType = ['Wedding', 'Portrait', 'Event', 'Product', 'Other'];
 
-  const [setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -64,59 +64,74 @@ function HireMe() {
         Hire Me
       </Typography>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <Stack spacing={2}>
-          <TextField
-            fullWidth
-            label="Full Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            sx={{ mb: 2 }}
-          />
-          <TextField
-            fullWidth
-            label="Email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
-            sx={{ mt: 2 }}
-          />
-          <TextField
-            fullWidth
-            select
-            label="Type of Shoot"
-            name="shootType"
-            value={formData.shootType}
-            onChange={handleChange}
-            sx={{ mt: 2 }}
-          >
-            {shootType.map((type) => (
-              <MenuItem key={type} value={type}>
-                {type}
-              </MenuItem>
-            ))}
-          </TextField>
+        {!submitted ? (
+          <Stack spacing={2}>
+            <TextField
+              fullWidth
+              label="Full Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              sx={{ mb: 2 }}
+            />
+            <TextField
+              fullWidth
+              label="Email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              sx={{ mt: 2 }}
+            />
+            <TextField
+              fullWidth
+              select
+              label="Type of Shoot"
+              name="shootType"
+              value={formData.shootType}
+              onChange={handleChange}
+              sx={{ mt: 2 }}
+            >
+              {shootType.map((type) => (
+                <MenuItem key={type} value={type}>
+                  {type}
+                </MenuItem>
+              ))}
+            </TextField>
 
-          <DateTimePicker
-            label="Preferred Date"
-            value={formData.date}
-            onChange={handleDateChange}
-            renderInput={(params) => <TextField fullWidth {...params} />}
-          />
-          <TextField
-            fullWidth
-            label="Additional Details"
-            name="message"
-            multiline
-            rows={4}
-            value={formData.message}
-            onChange={handleChange}
-          />
-          <Button variant="contained" sx={{ mt: 2, fontFamily: "'Reenie Beanie', cursive", fontSize: "1.5rem" }} onClick={handleSubmit}>
-            Submit for Booking
-          </Button>
-        </Stack>
+            <DateTimePicker
+              label="Preferred Date"
+              value={formData.date}
+              onChange={handleDateChange}
+              renderInput={(params) => <TextField fullWidth {...params} />}
+            />
+            <TextField
+              fullWidth
+              label="Additional Details"
+              name="message"
+              multiline
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+            />
+            <Button variant="contained" sx={{ mt: 2, fontFamily: "'Reenie Beanie', cursive", fontSize: "1.5rem" }} onClick={handleSubmit}>
+              Submit for Booking
+            </Button>
+          </Stack>
+        ) : (
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "50vh",
+            }}
+          >
+            <Typography variant="h5" sx={{ color: "white" }}>
+              Thank you for your message! I will get back to you soon.
+            </Typography>
+          </Box>
+        )}
       </LocalizationProvider>
     </Container>
   );
