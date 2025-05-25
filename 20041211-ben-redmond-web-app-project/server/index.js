@@ -1,27 +1,29 @@
 const express = require('express');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const admin = require('firebase-admin');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(bodyParser.json());
 app.use(express.json())
+app.use(cookieParser()); // Add this line to use cookie-parser
+
 
 const serviceAccount = require('./serviceAccountKey.json');
-
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });
-admin.firestore().settings({
-    timestampsInSnapshots: true,
 
 const db = admin.firestore();
 
 app.post('/contact', async (req, res) => {
-    const { name, email, massage } = req.body;
+    const { name, email, message } = req.body;
 
-    if (!name || !email || !massage) {
+    if (!name || !email || !message) {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -70,6 +72,35 @@ app.post('/bookings', async (req, res) => {
     }  
 
 });
+
+// Auth endpoints
+app.post('/signin', (req, res) => {
+    const { email, password } = req.body;
+    
+    // Simple authentication logic - replace with actual auth
+    if (email && password) {
+      res.status(200).json({ 
+        message: 'Sign in successful', 
+        user: { email } 
+      });
+    } else {
+      res.status(401).json({ message: 'Invalid credentials' });
+    }
+  });
+  
+  app.post('/signup', (req, res) => {
+    const { email, password } = req.body;
+    
+    // Simple registration logic - replace with actual implementation
+    if (email && password) {
+      res.status(201).json({ 
+        message: 'Account created successfully', 
+        user: { email } 
+      });
+    } else {
+      res.status(400).json({ message: 'Invalid input' });
+    }
+  });
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

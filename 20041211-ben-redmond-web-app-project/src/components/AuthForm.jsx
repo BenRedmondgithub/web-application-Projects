@@ -8,7 +8,7 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || '/userdashboard'; // Default to '/userdashboard'
 
   const handleAuth = async () => {
     if (!email || !password) {
@@ -17,7 +17,7 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
     }
 
     try {
-        const response = await fetch(`http://localhost:5000/${mode}`, {
+        const response = await fetch(`http://localhost:3000/${mode}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),
@@ -25,10 +25,18 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
 
         if (response.ok) {
             const data = await response.json();
-            console.log('Response data:', data);
-            localStorage.setItem('user', JSON.stringify( { email }));
+            console.log(`${mode} successful:`, data);
+
+            localStorage.setItem('user', JSON.stringify(data.user));
             setIsAuthenticated(true);
-            navigate("/");
+
+            if (email === 'redmond.ben@live.ie') {
+                navigate('/admindashboard');
+            } else { 
+                // Use the 'from' variable to redirect to the original location
+                navigate(from);
+            }
+                
 
         } else {
             const errorData = await response.json();
