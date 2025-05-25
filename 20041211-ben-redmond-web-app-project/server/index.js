@@ -6,15 +6,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
-app.use( express.json())
+app.use(express.json())
 
-const serviceAccount = require('./serviceAccount.json');
-const { tr } = require('date-fns/locale');
+const serviceAccount = require('./serviceAccountKey.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-
 });
+admin.firestore().settings({
+    timestampsInSnapshots: true,
 
 const db = admin.firestore();
 
@@ -25,17 +25,51 @@ app.post('/contact', async (req, res) => {
         return res.status(400).json({ error: 'All fields are required' });
     }
 
-    constemailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         return res.status(400).json({ error: 'Invalid email format' });
     }
 
     try {
-        await db.collection('contact').add({
-            return res.status(201).json({ message: 'Message sent successfully' });
-        }
+        await db.collection('messages').add({
+            name,
+            email,
+            massage,
+            timestamp: new Date()
+    });
+        res.status(201).json({ message: 'Message sent successfully' });
+    } catch (error) {
+        console.error('Error saving message:', error);
+        res.status(500).json({ error: 'Failed to send message' });
+    }
+});
 
-        tr
+
+// bookings endpoint
+app.post('/bookings', async (req, res) => {
+    const { name, email, shotType, date, message } = req.body;
+
+    if (!name || !email || !shotType || !date || !message) {
+        return res.status(400).json({ error: 'All fields are required' });
+    }
+
+    try {
+        await db.collection('sessions').add({
+            name,
+            email,
+            shotType,
+            date,
+            message,
+            timestamp: new Date()
+        });
+
+        res.status(201).json({ message: 'Booking submitted successfully' });
+    } catch (error) {
+        console.error('Error saving hire request:', error);
+        res.status(500).json({ error: 'Failed to send hire request' });
+    }  
+
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
