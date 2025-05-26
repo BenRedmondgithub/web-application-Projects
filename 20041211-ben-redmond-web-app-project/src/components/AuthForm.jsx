@@ -53,7 +53,7 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
       mt: 10, 
       backgroundColor: 'white',}}>
       <Typography variant="h4" gutterBottom>
-        {mode === 'signin' ? 'Sign In' : 'Sign Up'}
+        Signin
       </Typography>
 
       <TextField 
