@@ -33,8 +33,7 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
             if (email === 'redmond.ben@live.ie') {
                 navigate('/admindashboard');
             } else { 
-                // Use the 'from' variable to redirect to the original location
-                navigate(from);
+                navigate('/userdashboard', { state: { from } });
             }
                 
 

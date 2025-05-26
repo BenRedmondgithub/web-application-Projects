@@ -116,7 +116,10 @@ function ContactForm() {
               color="secondary"
               size="large"
               type="submit"
-              sx={{ mt: 5, mb: 10 }}
+              sx={{ 
+                mt: 5, 
+                mb: 10, 
+              alignItems: "center",}}
             >
               Send Message!
             </Button>
