@@ -12,6 +12,7 @@ app.use(bodyParser.json()); // Parse JSON bodies
 app.use(express.json()) ; // Parse JSON bodies
 app.use(cookieParser()); // Add this line to use cookie-parser
 
+
 // Initialize Firebase Admin SDK
 const serviceAccount = require('./serviceAccount.json'); // Path to your Firebase service account key file
 admin.initializeApp({
