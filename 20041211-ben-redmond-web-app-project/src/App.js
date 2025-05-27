@@ -15,6 +15,8 @@ import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/CONTACT";
 import FOOTER from "./components/FOOTER.jsx";
 import Cart from "./components/Cart.jsx";
+import Userdashboard from "./Pages/Userdashboard.jsx";
+import Admindashboard from "./Pages/Admindashboard.jsx";
 import Catalog from "./Pages/Catalog.jsx";
 
 function HomePage() {
@@ -45,6 +47,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/:id" element={<Cart />} /> 
         <Route path="/product/:id" element={<ItemDescription />} />
+        <Route path="/userdashboard" element={<Userdashboard />} />
+        <Route path="/admindashboard" element={<Admindashboard />} />
       </Routes>
       <FOOTER />
     </Router>

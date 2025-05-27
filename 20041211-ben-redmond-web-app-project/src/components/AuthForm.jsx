@@ -36,11 +36,10 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
                 navigate('/userdashboard', { state: { from } });
             }
                 
-
         } else {
             const errorData = await response.json();
             console.error('Error response:', errorData); // Debugging log
-            alert(`${mode === 'signin' ? 'Signin' : 'Signup'} failed: ${errorData.message || 'Unknown error'}`);
+            alert(`${mode === 'signin' ? 'Sign In' : 'Sign Up'} failed: ${errorData.message || 'Unknown error'}`);
         }
     } catch (error) {
         console.error(`${mode} error:`, error);
@@ -50,8 +49,8 @@ const AuthForm = ({ mode, setIsAuthenticated }) => {
 
   return (
     <Container maxWidth="sm" sx={{ 
-      mt: 10, 
-      backgroundColor: 'white',}}>
+      mt: 10,
+      color: 'Black',}}>
       <Typography variant="h4" gutterBottom>
         Signin
       </Typography>
