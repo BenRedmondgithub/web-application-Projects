@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Typography } from "@mui/material";
 
+// Catalog items data
 const catalogItems = [
     {
         title: "Dublin",
@@ -23,10 +24,12 @@ const catalogItems = [
     },
 ];
 
+// CatalogItemDetails component to display details of a catalog item
 function CatalogItemDetails() {
     const { key } = useParams();
     const item = catalogItems.find((item) => item.key === key);
 
+// If the item is not found, display a message
     if (!item) {
         return (
             <Container>
@@ -36,16 +39,22 @@ function CatalogItemDetails() {
             </Container>
         );
     }
-
+    // Render the details of the catalog item
     return (
         <Container>
             <Typography variant="h4" align="center" gutterBottom>
                 {item.title}
             </Typography>
-            <img src={item.image} alt={item.title} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
+            <img src={item.image} alt={item.title} 
+            style={{ 
+            width: "100%", 
+            maxHeight: "400px", 
+            objectFit: "cover" }} />
+            
             <Typography variant="body1" align="center" gutterBottom>
                 {item.description}
             </Typography>
+        
         </Container>
     );
 }

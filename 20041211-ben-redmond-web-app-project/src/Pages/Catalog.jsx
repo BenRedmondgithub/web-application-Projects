@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Container, Typography, Grid, Card, CardContent, CardActions, CardMedia } from "@mui/material";
 import { Button } from "@mui/material";
 
+// Catalog items data
 const catalogItems = [
     {
         title: "Dublin",
@@ -27,13 +28,16 @@ const catalogItems = [
     },
 ];
 
+// Catalog component to display the catalog items
+
 function Catalog() { 
 
-    const navigate = useNavigate(); 
+    const navigate = useNavigate(); // Use useNavigate hook to programmatically navigate
 
     const handleViewDetails = (key) => {
-        navigate(`/shop?category=${key}`);
+        navigate(`/shop?category=${key}`); // Navigate to the CatalogItemDetails page with the selected category key
     };
+
 
     return ( 
         <Container sx={{ py:10 }}>
@@ -57,7 +61,7 @@ function Catalog() {
             </Typography>
             
             <Grid container spacing={1} justifyContent="center">
-                {catalogItems.map((category, index) => (
+                {catalogItems.map((category, index) => ( // Map through catalog items to create a card for each category
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card sx={{
                             fontFamily: "'Reenie Beanie', cursive",
@@ -68,12 +72,14 @@ function Catalog() {
                             maxWidth: 345,
                             mx: 'auto', 
                         }}>
+                            
                             <CardMedia
                                 component="img"
                                 height="240"
                                 image={category.image}
                                 alt={category.title}
                             />
+                            
                             <CardContent>
                                 <Typography variant="h5" align="center"
                                     sx={{ fontFamily: "'Dancing Script', cursive", color: 'black', fontSize: "3rem" }}>
@@ -89,7 +95,7 @@ function Catalog() {
                                 color="primary" 
                                 onClick={() => handleViewDetails(category.key)}
                                  >
-                                    View {category.title}
+                                    View {category.title} 
                                 </Button>
                             </CardActions>
                         </Card>

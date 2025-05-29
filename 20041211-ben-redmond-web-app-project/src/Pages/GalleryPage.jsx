@@ -1,7 +1,9 @@
 import React from 'react'
 import { Grid, Card, CardMedia, Box, Typography } from '@mui/material'
-import '../App.css'; // Import your CSS file
+import '../App.css'; 
 
+
+// This is the PortfolioPage component that displays a portfolio of images
 const portfolioItems = [
     { image: '/img/_MG_7366.jpg' },
     { image: '/img/_MG_7709.jpg' },

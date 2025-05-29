@@ -1,7 +1,7 @@
 {
   "name": "photography-site-server",
   "version": "1.0.0",
-  "description": "Backend server for Ben Redmond Photography website",
+  "description": "Server for Ben Redmond Photography",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "body-parser": "^1.20.2",
-    "cookie-parser": "^1.4.7",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "firebase-admin": "^13.4.0"
+    "firebase-admin": "^11.10.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
