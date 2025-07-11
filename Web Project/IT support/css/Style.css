@@ -2,7 +2,7 @@ body {
         background-color: #f8f9fa;
       }
       .hero.text-center {
-        background-image: url('../assigns/imgs/Information-Technology-1.jpg');
+        background-image: url('/Web Project/IT support/assists/Information-Technology-1.jpg');
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
