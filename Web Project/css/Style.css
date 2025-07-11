@@ -1,63 +1,34 @@
-.hero-section {
-    background-image: url('https://scontent-dub4-1.xx.fbcdn.net/v/t1.6435-9/205611492_887056145213993_75701544395680594_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LIONkMNyD1oQ7kNvgHuP9hb&_nc_oc=Admj2J3YesKFl65zlXWG5UCSOoWWybNzOFSr_Yof2o23RtS27IQhi6U3NB7Dfc4-kGU&_nc_zt=23&_nc_ht=scontent-dub4-1.xx&_nc_gid=d6j5SfN6ahh5Wm8nM9J6qA&oh=00_AYFAQXcmzJ5gk6g1SzDhEeXYsigekucTiKBIoCX-q55rXw&oe=6811D821');
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 100px 0;
-    height: 1150px;
-}
+body {
+        background-color: #f8f9fa;
+      }
+      .hero.text-center {
+        background-image: url('../assigns/imgs/Information-Technology-1.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #ffffff;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      
+      .hero p {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+      .section-title {
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
 
-.hero-section h1 {
-    font-size: 5rem;
-    font-weight: bold;
-    padding-top: 220px;
-}
-
-.hero-section p {
-    font-size: 2.5rem;
-}
-
-.container-1 {
-    padding-top: 150px; /* Adjust the value as needed */
-    padding-bottom: 250px;
-    padding-left: 200px;
-    top: 120px;
-    bottom: 100px;
-}
-
-.card3 {
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.container-2 .card {
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-body{
-    background-color:#eee;
-}
-
-.card{
-    
-    border:none;
-}
-
-.user-content p{
-    margin-top:5px;
-    font-size:12px;
-}
-
-
-.ratings i{
-    color:blue;
-}
+      .list-group.list-group-flush {
+        margin-bottom: 20px;
+        text-align: center;
+      }
